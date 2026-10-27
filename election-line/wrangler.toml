@@ -12,3 +12,5 @@ GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw0EvDd2K3XjZe6UJKR
 YEMOT_ROOT = "/"
 # News is read directly from the fixed public Telegram channels in news.js.
 # No Telegram token, site login or NEWS_AUTHORIZATION is required.
+# To enable native Yemot TTS files, add a secret named YEMOT_API_KEY.
+# It is a permanent Yemot API key; never place its value in this file.

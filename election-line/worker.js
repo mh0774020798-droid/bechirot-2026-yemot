@@ -1,4 +1,5 @@
 import {loadNews, renderNews, readNewsStatus} from './news.js';
+import {syncNewsFiles,readNewsFilesStatus,lastReadyNewsFiles} from './yemot-files.js';
 /** Cloudflare Worker — החליפו את כתובת Google בשורה הבאה. */
 const DEFAULT_GOOGLE_SCRIPT_URL = 'PASTE_GOOGLE_APPS_SCRIPT_EXEC_URL_HERE';
 const DEFAULT_YEMOT_ROOT = '/'; // תפריט הבחירות בשלוחה הראשית
@@ -115,7 +116,7 @@ function validHealth(data) {
 }
 
 export default {
-  async fetch(request, env = {}) {
+  async fetch(request, env = {}, ctx) {
     if (!['GET', 'POST'].includes(request.method)) return plain('Method not allowed', 405);
     const url = new URL(request.url), path = url.pathname.replace(/\/$/, '') || '/';
     const topic = path === '/' || path === '/menu' ? 'menu' : path === '/news' ? 'summary' : path.slice(1);
@@ -127,9 +128,14 @@ export default {
       const p = await parameters(request, url);
       if (topic === 'summary') {
         const data=await loadNews(env,{origin:url.origin,readText:limitedText});
+        const previous=ctx?.waitUntil?await lastReadyNewsFiles(env,url.origin,root):null;
+        let files;
+        if(previous){ctx.waitUntil(syncNewsFiles(data,env,{origin:url.origin,root,readText:limitedText}));files=previous;}
+        else files=await syncNewsFiles(data,env,{origin:url.origin,root,readText:limitedText});
+        if(files.state==='ready')return new Response('go_to_folder='+files.target,{headers:{...HEADERS,'X-Election-News-State':data.state,'X-Election-Playback-Mode':'files','X-Election-Files-State':'ready'}});
         const text=renderNews(data,root);
         if(!validIvr(text,topic,root))throw new Error('PROTOCOL');
-        return new Response(text,{headers:{...HEADERS,'X-Election-News-State':data.state}});
+        return new Response(text,{headers:{...HEADERS,'X-Election-News-State':data.state,'X-Election-Playback-Mode':'stream','X-Election-Files-State':files.state}});
       }
       const sourceRoot = root === '/' ? '/9' : root;
       const params = new URLSearchParams({topic, root: sourceRoot});
@@ -141,7 +147,8 @@ export default {
         if (!validHealth(data)) throw new Error('HEALTH');
         const topics = Object.fromEntries(TOPICS.map(t => [t, {cached: data.topics[t].cached, ageSeconds: data.topics[t].ageSeconds}]));
         const news=await readNewsStatus(env,url.origin);
-        return json({ok: true, version: data.version, checkedAt: data.checkedAt, topics, news});
+        const newsFiles=await readNewsFilesStatus(env,url.origin,root);
+        return json({ok: true, version: data.version, checkedAt: data.checkedAt, topics, news, newsFiles});
       }
       if (!validIvr(text, topic, sourceRoot)) throw new Error('PROTOCOL');
       let reply = phoneCompatible(clientIvr(text, topic, sourceRoot, root));

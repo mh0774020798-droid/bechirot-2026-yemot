@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-10-27T20:38:24.774Z",
+  "scope": "Readback from Yemot management API; no telephone audio test",
+  "ok": true,
+  "files": [
+    {
+      "name": "000.tts",
+      "characters": 62,
+      "source": "ערוץ עמית סגל",
+      "sha256": "649a9c108521b5941ecc1c85ea8008d66480df7d90775d28fa4bf0f8ba3eacf4"
+    },
+    {
+      "name": "001.tts",
+      "characters": 67,
+      "source": "ערוץ עמית סגל",
+      "sha256": "877e46567d7df891bc715ea77f08b40ae27923f826c138093f69a972b36845cd"
+    },
+    {
+      "name": "002.tts",
+      "characters": 48,
+      "source": "ערוץ ינון מגל",
+      "sha256": "38177700b647c25b0ce4f43a224a6cbd5bcbfddea76e2944f2bddfd14439a4fd"
+    },
+    {
+      "name": "003.tts",
+      "characters": 182,
+      "source": "ערוץ עמית סגל",
+      "sha256": "aa63b2a4bc1429e7b3935c45d058cd4215fcc7407ea36ed81865b7f0ce9d7877"
+    },
+    {
+      "name": "004.tts",
+      "characters": 109,
+      "source": "ערוץ עמית סגל",
+      "sha256": "0f5f9270f622e7df6f1dca6d358dbd7f2e8be84bd3ad9052bb0162ab52e0d48e"
+    },
+    {
+      "name": "005.tts",
+      "characters": 90,
+      "source": "ערוץ ארבע עשרה",
+      "sha256": "d56a4f2a83d9a5266150b2abd1c955cc260b4282cb1c387fb5a55b9db64e695c"
+    },
+    {
+      "name": "006.tts",
+      "characters": 198,
+      "source": "ערוץ ארבע עשרה",
+      "sha256": "680cebd95aa9b18f89c54cb35d0626681c03a72f67981bee1fe381862833c263"
+    },
+    {
+      "name": "007.tts",
+      "characters": 75,
+      "source": "ערוץ ארבע עשרה",
+      "sha256": "f9fb0a2419d3c6c557b3ce2539865c7cd872dad0200026541a22dbf6a447005c"
+    },
+    {
+      "name": "008.tts",
+      "characters": 83,
+      "source": "ערוץ ארבע עשרה",
+      "sha256": "01de3866241ffd71c5e082843b9191d6cc93474d5b568fdff6e9a47ab9e520ac"
+    },
+    {
+      "name": "009.tts",
+      "characters": 75,
+      "source": "ערוץ ינון מגל",
+      "sha256": "dee8c52a1bed1497c9d0e645c5d9b0eccc35ab2ac449480661590570b65daead"
+    },
+    {
+      "name": "010.tts",
+      "characters": 48,
+      "source": "ערוץ ינון מגל",
+      "sha256": "19961e66bbf45cf858c1c0b4bb64e8d8515b89ddcee9a2fd0570d9b454bc4a89"
+    },
+    {
+      "name": "011.tts",
+      "characters": 41,
+      "source": "ערוץ ינון מגל",
+      "sha256": "3130a0d902013330826e21706fdea8d2f9adb33da4f8c94341ec11ea54e7f236"
+    }
+  ],
+  "player": "/1/1",
+  "sourceFolder": "/1/1/1032737747627802377577291",
+  "controls": {
+    "previous": 4,
+    "next": 6,
+    "repeat": 5,
+    "main": 0
+  },
+  "count": 12,
+  "introVerified": true,
+  "verifiedAt": "2026-10-27T20:38:59.831Z"
+}

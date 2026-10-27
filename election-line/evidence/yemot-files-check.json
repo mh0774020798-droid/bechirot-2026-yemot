@@ -1,0 +1,26 @@
+{
+  "checkedAt": "2026-10-27T20:41:22.427Z",
+  "codeTests": {
+    "total": 246,
+    "passed": 246,
+    "newYemotSimulationTests": 34
+  },
+  "liveHttpsChecks": {
+    "total": 28,
+    "passed": 28
+  },
+  "nativeTts": {
+    "configured": true,
+    "state": "ready",
+    "player": "/1/1",
+    "realYemotWritesPerformed": true,
+    "readbackFilesVerified": 12,
+    "readbackVerifiedAt": "2026-10-27T20:38:59.831Z",
+    "telephoneAudioTested": false
+  },
+  "deployment": {
+    "id": "a4872b756c0a4c9b942ebae7a023875f",
+    "modifiedOn": "2026-10-27T20:41:00.958197Z",
+    "etag": "16bd5583cc8b706dbe91e693f97005e02cd7a5de22f6c10bf959ccad6ddfb4dc"
+  }
+}

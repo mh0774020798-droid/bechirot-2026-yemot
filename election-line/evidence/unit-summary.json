@@ -1,11 +1,11 @@
 {
   "command": "node --test --test-reporter=tap tests/*.test.mjs",
   "exitCode": 0,
-  "tests": 212,
-  "pass": 212,
+  "tests": 246,
+  "pass": 246,
   "fail": 0,
   "cancelled": 0,
   "skipped": 0,
   "todo": 0,
-  "scope": "Code tests include native menu configuration, root routing, phone-safe party narration, public Telegram parsing, Israel publication times, per-channel caching, partial failures and the selected Channel 14 fallback."
+  "scope": "Includes Yemot management API simulation, TTS snapshots, publication order, native controls, background refresh, per-edge refresh coordination, secret handling and safe fallback. Separate live evidence verifies actual Yemot files."
 }
