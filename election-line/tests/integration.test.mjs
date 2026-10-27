@@ -55,10 +55,15 @@ test('a long post-election bulletin is split into supported chunks, without trun
     assert.ok(spoken.startsWith(h.context.electionSafeText_(body))); assert.equal(spoken.match(/עשרה מנדטים/g).length, 700);
   });
 });
-test('all six supplied ext.ini files route to the correct Worker handlers', () => {
+test('native main menu and five API extensions use the supplied routing', () => {
+  const rootIni = fs.readFileSync(new URL('../yemot/ext.ini', import.meta.url), 'utf8');
+  assert.match(rootIni, /^type=menu$/m);
+  assert.doesNotMatch(rootIni, /^api_link=/m);
+  const menuPrompt = fs.readFileSync(new URL('../yemot/M1000.tts', import.meta.url), 'utf8');
+  assert.match(menuPrompt, /לעדכוני החדשות/);
   const paths = ['menu', ...TOPICS];
   let origin;
-  for (let i = 0; i < paths.length; i++) {
+  for (let i = 1; i < paths.length; i++) {
     const relative = i ? `${i}/ext.ini` : 'ext.ini';
     const ini = fs.readFileSync(new URL('../yemot/' + relative, import.meta.url), 'utf8');
     const link = new URL(ini.split('\n').find(line => line.startsWith('api_link=')).slice('api_link='.length).trim());
