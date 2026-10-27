@@ -2,7 +2,8 @@ import fs from 'node:fs';
 import worker from '../worker.js';
 import {gasHarness, sourceResponse, TOPICS, withFetch, googleFromGas, workerRequest, workerEnv} from '../tests/harness.mjs';
 
-const sources = await Promise.all(TOPICS.map(async topic => {
+const sourceTopics=TOPICS.filter(topic=>topic!=='summary');
+const sources = await Promise.all(sourceTopics.map(async topic => {
   const url = `https://bechirot.onrender.com/api/phone/${topic}.txt`, start = Date.now();
   try {
     const response = await fetch(url, {signal: AbortSignal.timeout(30000), headers: {'Accept': 'text/plain', 'Cache-Control': 'no-cache'}});
@@ -26,7 +27,7 @@ for (const item of sources.filter(x => x.ok)) {
 const report = {
   checkedAt: new Date().toISOString(),
   scope: 'Real HTTP source checks plus local replay through Google Apps Script and Worker; no deployed Google/Cloudflare/phone test.',
-  ok: sources.length === 5 && sources.every(x => x.ok) && replay.length === 5 && replay.every(x => x.ok),
+  ok: sources.length === sourceTopics.length && sources.every(x => x.ok) && replay.length === sourceTopics.length && replay.every(x => x.ok),
   sources: sources.map(({text, ...other}) => ({...other, ...(text ? {characters: text.length} : {})})), replay
 };
 fs.mkdirSync(new URL('../evidence/', import.meta.url), {recursive: true});

@@ -1,13 +1,14 @@
+import {loadNews, renderNews, readNewsStatus} from './news.js';
 /** Cloudflare Worker — החליפו את כתובת Google בשורה הבאה. */
 const DEFAULT_GOOGLE_SCRIPT_URL = 'PASTE_GOOGLE_APPS_SCRIPT_EXEC_URL_HERE';
-const DEFAULT_YEMOT_ROOT = '/9'; // השלוחה שבה הותקן תפריט הבחירות
+const DEFAULT_YEMOT_ROOT = '/'; // תפריט הבחירות בשלוחה הראשית
 const TOPICS = ['summary', 'turnout', 'exitpolls', 'results', 'parties'];
 const MENU_SUFFIX = '=election_choice,no,1,1,7,No,yes,no,,0123459';
 const HEADERS = {'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'no-store, max-age=0', 'X-Content-Type-Options': 'nosniff'};
 
 function rootPath(env) {
   const value = String(env.YEMOT_ROOT || DEFAULT_YEMOT_ROOT);
-  if (!/^\/[0-9]+(?:\/[0-9]+)*$/.test(value) || value.length > 60) throw new Error('CONFIG_ROOT');
+  if (!(value === '/' || /^\/[0-9]+(?:\/[0-9]+)*$/.test(value)) || value.length > 60) throw new Error('CONFIG_ROOT');
   return value;
 }
 
@@ -59,15 +60,36 @@ function validSpeech(value) {
   return value.split('.').every(part => /^t-[^.\-=&<>\u0000-\u001f]+$/.test(part) && part.length <= 702 && part.slice(2).trim().length > 0);
 }
 
+function childPath(root, key) { return (root === '/' ? '' : root) + '/' + key; }
+
+function phoneCompatible(text) {
+  // מרכאות ASCII ולוכסני escape בתוך טקסט TTS עלולים לשבור את פענוח התשובה בימות.
+  // מפעילים רק אחרי אימות הפרוטוקול, ובודקים שוב את התוצאה לפני שליחה.
+  return text.replace(/[\\"'`]/g, '');
+}
+
 function validIvr(text, topic, root) {
   if (text.length > 120000) return false;
   if (topic === 'menu') {
     const parent = root.slice(0, root.lastIndexOf('/')) || '/';
-    if ([parent, ...[1, 2, 3, 4, 5].map(n => root + '/' + n)].some(path => text === 'go_to_folder=' + path)) return true;
+    if ([parent, ...[1, 2, 3, 4, 5].map(n => childPath(root, n))].some(path => text === 'go_to_folder=' + path)) return true;
     return text.startsWith('read=') && text.endsWith(MENU_SUFFIX) && validSpeech(text.slice(5, -MENU_SUFFIX.length));
   }
   const suffix = '&go_to_folder=' + root;
   return text.startsWith('id_list_message=') && text.endsWith(suffix) && validSpeech(text.slice(16, -suffix.length));
+}
+
+function clientIvr(text, topic, sourceRoot, root) {
+  if (sourceRoot === root) return text;
+  // פריסת Google הקיימת מקבלת נתיב מספרי. מתאימים רק הפניות שכבר אומתו,
+  // כדי לתמוך בשלוחה הראשית בלי לדרוש החלפה או פריסה מחדש ב-Google.
+  if (topic === 'menu') {
+    const prefix = 'go_to_folder=' + sourceRoot + '/';
+    if (text.startsWith(prefix)) return 'go_to_folder=' + childPath(root, text.slice(prefix.length));
+    return text.replace('לחזרה לתפריט הקודם הקישו אפס', 'להשמעת התפריט מחדש הקישו אפס');
+  }
+  const suffix = '&go_to_folder=' + sourceRoot;
+  return text.slice(0, -suffix.length) + '&go_to_folder=' + root;
 }
 
 async function google(env, params) {
@@ -96,14 +118,21 @@ export default {
   async fetch(request, env = {}) {
     if (!['GET', 'POST'].includes(request.method)) return plain('Method not allowed', 405);
     const url = new URL(request.url), path = url.pathname.replace(/\/$/, '') || '/';
-    const topic = path === '/' || path === '/menu' ? 'menu' : path.slice(1);
+    const topic = path === '/' || path === '/menu' ? 'menu' : path === '/news' ? 'summary' : path.slice(1);
     if (![...TOPICS, 'menu', 'health'].includes(topic)) return plain('Not found', 404);
     let root;
     try { root = rootPath(env); }
     catch (_) { return topic === 'health' ? json({ok: false, error: 'configuration'}, 503) : unavailable('/'); }
     try {
       const p = await parameters(request, url);
-      const params = new URLSearchParams({topic, root});
+      if (topic === 'summary') {
+        const data=await loadNews(env,{origin:url.origin,readText:limitedText});
+        const text=renderNews(data,root);
+        if(!validIvr(text,topic,root))throw new Error('PROTOCOL');
+        return new Response(text,{headers:{...HEADERS,'X-Election-News-State':data.state}});
+      }
+      const sourceRoot = root === '/' ? '/9' : root;
+      const params = new URLSearchParams({topic, root: sourceRoot});
       // אין העברה של URL, נתיב יעד, טוקן, פעולת ניהול או מספר טלפון מהבקשה.
       if (topic === 'menu' && /^[0-59]$/.test(p.get('election_choice') || '')) params.set('election_choice', p.get('election_choice'));
       const text = await google(env, params);
@@ -111,10 +140,14 @@ export default {
         const data = JSON.parse(text);
         if (!validHealth(data)) throw new Error('HEALTH');
         const topics = Object.fromEntries(TOPICS.map(t => [t, {cached: data.topics[t].cached, ageSeconds: data.topics[t].ageSeconds}]));
-        return json({ok: true, version: data.version, checkedAt: data.checkedAt, topics});
+        const news=await readNewsStatus(env,url.origin);
+        return json({ok: true, version: data.version, checkedAt: data.checkedAt, topics, news});
       }
-      if (!validIvr(text, topic, root)) throw new Error('PROTOCOL');
-      return plain(text);
+      if (!validIvr(text, topic, sourceRoot)) throw new Error('PROTOCOL');
+      let reply = phoneCompatible(clientIvr(text, topic, sourceRoot, root));
+      if (topic === 'menu' && reply.startsWith('read=')) reply=reply.replace('לתקציר העדכני', 'לעדכוני החדשות');
+      if (!validIvr(reply, topic, root)) throw new Error('PROTOCOL');
+      return plain(reply);
     } catch (_) {
       return topic === 'health' ? json({ok: false, error: 'google_unavailable'}, 503) : unavailable(root);
     }

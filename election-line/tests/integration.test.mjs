@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import worker from '../worker.js';
 import {gasHarness, sourceResponse, TOPICS, withFetch, workerRequest, workerEnv, googleFromGas} from './harness.mjs';
 
-for (let index = 0; index < TOPICS.length; index++) test(`simulated call: menu → key ${index + 1} → ${TOPICS[index]} → election menu`, async () => {
+for (let index = 1; index < TOPICS.length; index++) test(`simulated call: menu → key ${index + 1} → ${TOPICS[index]} → election menu`, async () => {
   const topic = TOPICS[index], text = fs.readFileSync(new URL(`./fixtures/${topic}.txt`, import.meta.url), 'utf8');
   const h = gasHarness({fetch: () => sourceResponse(text)});
   await withFetch(googleFromGas(h), async () => {
@@ -59,7 +59,7 @@ test('all six supplied ext.ini files route to the correct Worker handlers', () =
   const paths = ['menu', ...TOPICS];
   let origin;
   for (let i = 0; i < paths.length; i++) {
-    const relative = i ? `9/${i}/ext.ini` : '9/ext.ini';
+    const relative = i ? `${i}/ext.ini` : 'ext.ini';
     const ini = fs.readFileSync(new URL('../yemot/' + relative, import.meta.url), 'utf8');
     const link = new URL(ini.split('\n').find(line => line.startsWith('api_link=')).slice('api_link='.length).trim());
     if (!origin) origin = link.origin;

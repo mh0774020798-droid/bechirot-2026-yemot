@@ -1,11 +1,11 @@
 {
-  "command": "node --test --test-reporter=tap tests/gas.test.mjs tests/worker.test.mjs tests/integration.test.mjs",
+  "command": "node --test --test-reporter=tap tests/gas.test.mjs tests/integration.test.mjs tests/news.test.mjs tests/phone-compat.test.mjs tests/root.test.mjs tests/worker.test.mjs",
   "exitCode": 0,
-  "tests": 133,
-  "pass": 133,
+  "tests": 198,
+  "pass": 198,
   "fail": 0,
   "cancelled": 0,
   "skipped": 0,
   "todo": 0,
-  "scope": "Local code tests with simulated Google services and simulated Google-to-Worker transport."
+  "scope": "Code tests include root routing, phone-safe party narration and synthetic authenticated site-news responses."
 }

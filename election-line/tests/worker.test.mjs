@@ -6,7 +6,7 @@ import {gasHarness, withFetch, workerRequest, workerEnv, goodMessage, googleFrom
 test('valid Google response is returned as UTF-8 text without a redirect', async () => {
   await withFetch(async (url, opts) => {
     assert.equal(url, GOOGLE_URL); assert.equal(opts.method, 'POST'); assert.equal(opts.redirect, 'follow');
-    assert.equal(new URLSearchParams(opts.body).get('topic'), 'summary');
+    assert.equal(new URLSearchParams(opts.body).get('topic'), 'turnout');
     return new Response(goodMessage);
   }, async () => {
     const out = await worker.fetch(workerRequest(), workerEnv);
@@ -15,7 +15,7 @@ test('valid Google response is returned as UTF-8 text without a redirect', async
     assert.equal(await out.text(), goodMessage);
   });
 });
-for (const topic of TOPICS) test(`route /${topic} fixes the Google topic and return folder`, async () => {
+for (const topic of TOPICS.filter(t=>t!=='summary')) test(`route /${topic} fixes the Google topic and return folder`, async () => {
   await withFetch(async (_url, opts) => {
     const p = new URLSearchParams(opts.body); assert.equal(p.get('topic'), topic); assert.equal(p.get('root'), '/9'); return new Response(goodMessage);
   }, async () => assert.equal(await (await worker.fetch(workerRequest('/' + topic + '?topic=health&root=/1&next=hangup'), workerEnv)).text(), goodMessage));

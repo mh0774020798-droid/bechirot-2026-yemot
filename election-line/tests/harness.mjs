@@ -69,15 +69,20 @@ export async function withFetch(stub, run) {
   try { return await run(); } finally { globalThis.fetch = original; }
 }
 
-export function workerRequest(path = '/summary', init = {}) { return new Request('https://line.example' + path, init); }
+export function workerRequest(path = '/turnout', init = {}) { return new Request('https://line.example' + path, init); }
 export const workerEnv = {GOOGLE_SCRIPT_URL: GOOGLE_URL, YEMOT_ROOT: '/9'};
 export const goodMessage = 'id_list_message=t-עדכון בחירות תקין&go_to_folder=/9';
 
 export function googleFromGas(gas, calls = []) {
   return async (url, init) => {
     calls.push({url, init});
+    if(String(url).includes('/data/news.json')) return new Response(JSON.stringify(syntheticNews()),{headers:{'Content-Type':'application/json'}});
     const p = Object.fromEntries(new URLSearchParams(init.body));
     const out = gas.request(p, 'POST');
     return new Response(out.text, {headers: {'Content-Type': out.mime}});
   };
+}
+
+export function syntheticNews() {
+  return {items:['ערוץ 14','ינון מגל','עמית סגל'].map((source,index)=>({source,date:new Date(Date.now()-60000-index*60000).toISOString(),title:'עדכון בדיקה '+['אלף','בית','גימל'][index],summary:'מידע סינתטי לצורכי בדיקה בלבד',url:''}))};
 }

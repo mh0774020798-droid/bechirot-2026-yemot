@@ -9,4 +9,6 @@ head_sampling_rate = 0.1
 
 [vars]
 GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw0EvDd2K3XjZe6UJKRt3pcsy5YP68hWJQ9eCiLs9bBpBZvaCnZSwH_oIafZQlvjZMh/exec"
-YEMOT_ROOT = "/9"
+YEMOT_ROOT = "/"
+NEWS_DATA_URL = "https://bechirot.onrender.com/data/news.json"
+# אם ספק האתר מסר כותרת Authorization מורשית, שומרים אותה כ-secret בשם NEWS_AUTHORIZATION.
