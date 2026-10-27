@@ -1,0 +1,8 @@
+name = "elections-2026-yemot"
+main = "worker.js"
+compatibility_date = "2026-10-27"
+
+# לחלופין לשינוי הקבועים בראש worker.js:
+# [vars]
+# GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec"
+# YEMOT_ROOT = "/9"

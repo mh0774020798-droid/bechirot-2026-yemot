@@ -1,0 +1,84 @@
+{
+  "checkedAt": "2026-10-27T13:37:03.118Z",
+  "scope": "Real HTTP source checks plus local replay through Google Apps Script and Worker; no deployed Google/Cloudflare/phone test.",
+  "ok": true,
+  "sources": [
+    {
+      "topic": "summary",
+      "url": "https://bechirot.onrender.com/api/phone/summary.txt",
+      "ok": true,
+      "http": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "milliseconds": 6616,
+      "characters": 231
+    },
+    {
+      "topic": "turnout",
+      "url": "https://bechirot.onrender.com/api/phone/turnout.txt",
+      "ok": true,
+      "http": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "milliseconds": 6567,
+      "characters": 231
+    },
+    {
+      "topic": "exitpolls",
+      "url": "https://bechirot.onrender.com/api/phone/exitpolls.txt",
+      "ok": true,
+      "http": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "milliseconds": 6600,
+      "characters": 91
+    },
+    {
+      "topic": "results",
+      "url": "https://bechirot.onrender.com/api/phone/results.txt",
+      "ok": true,
+      "http": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "milliseconds": 6617,
+      "characters": 79
+    },
+    {
+      "topic": "parties",
+      "url": "https://bechirot.onrender.com/api/phone/parties.txt",
+      "ok": true,
+      "http": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "milliseconds": 6620,
+      "characters": 765
+    }
+  ],
+  "replay": [
+    {
+      "topic": "summary",
+      "ok": true,
+      "ivrCharacters": 265,
+      "chunks": 1
+    },
+    {
+      "topic": "turnout",
+      "ok": true,
+      "ivrCharacters": 265,
+      "chunks": 1
+    },
+    {
+      "topic": "exitpolls",
+      "ok": true,
+      "ivrCharacters": 125,
+      "chunks": 1
+    },
+    {
+      "topic": "results",
+      "ok": true,
+      "ivrCharacters": 113,
+      "chunks": 1
+    },
+    {
+      "topic": "parties",
+      "ok": true,
+      "ivrCharacters": 801,
+      "chunks": 2
+    }
+  ]
+}

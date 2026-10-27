@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-27T13:29:31.083513+00:00",
+  "sources": [
+    {
+      "topic": "summary",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 389,
+      "words": 43,
+      "seconds": 7.64169
+    },
+    {
+      "topic": "turnout",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 389,
+      "words": 43,
+      "seconds": 8.222523
+    },
+    {
+      "topic": "exitpolls",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 158,
+      "words": 15,
+      "seconds": 7.752066
+    },
+    {
+      "topic": "results",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 139,
+      "words": 13,
+      "seconds": 7.745028
+    },
+    {
+      "topic": "parties",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bytes": 1340,
+      "words": 132,
+      "seconds": 8.220016
+    }
+  ],
+  "repository": "https://github.com/mh0774020798-droid/bechirot-2026-yemot",
+  "repositoryCommit": "f4a31e948bbf8aa1a437a2863834ba3fb93f69d6",
+  "purpose": "Fixture provenance; not used as production data"
+}

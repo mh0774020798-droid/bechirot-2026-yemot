@@ -1,0 +1,13 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Data in this repository and served by the endpoints described in README.md
+may be shared and adapted for any purpose, provided that appropriate credit is given:
+
+  "הנתונים באדיבות אתר בחירות 2026 – חדר המצב"
+
+Underlying facts (turnout, exit polls, official results, candidate lists) originate
+from the Israeli Central Elections Committee and the media outlets that published them.
+Official and binding results are those of the Central Elections Committee only.
+
+The data is provided "as is", without warranty of any kind.
