@@ -1,0 +1,116 @@
+{
+  "elections": [
+    {
+      "id": "k21",
+      "knesset": 21,
+      "date": "2019-04-09",
+      "turnout": 0.6846,
+      "pm": "בנימין נתניהו (לא הורכבה ממשלה)",
+      "results": [
+        { "name": "הליכוד", "seats": 35, "color": "#3b82f6", "bloc": "right" },
+        { "name": "כחול לבן", "seats": 35, "color": "#38bdf8", "bloc": "center" },
+        { "name": "ש\"ס", "seats": 8, "color": "#6366f1", "bloc": "right" },
+        { "name": "יהדות התורה", "seats": 8, "color": "#94a3b8", "bloc": "right" },
+        { "name": "חד\"ש-תע\"ל", "seats": 6, "color": "#34d399", "bloc": "arab" },
+        { "name": "העבודה", "seats": 6, "color": "#ef4444", "bloc": "center" },
+        { "name": "ישראל ביתנו", "seats": 5, "color": "#e879f9", "bloc": "other" },
+        { "name": "איחוד מפלגות הימין", "seats": 5, "color": "#f97316", "bloc": "right" },
+        { "name": "מרצ", "seats": 4, "color": "#22c55e", "bloc": "center" },
+        { "name": "כולנו", "seats": 4, "color": "#0ea5e9", "bloc": "right" },
+        { "name": "רע\"ם-בל\"ד", "seats": 4, "color": "#16a34a", "bloc": "arab" }
+      ]
+    },
+    {
+      "id": "k22",
+      "knesset": 22,
+      "date": "2019-09-17",
+      "turnout": 0.6983,
+      "pm": "בנימין נתניהו (לא הורכבה ממשלה)",
+      "results": [
+        { "name": "כחול לבן", "seats": 33, "color": "#38bdf8", "bloc": "center" },
+        { "name": "הליכוד", "seats": 32, "color": "#3b82f6", "bloc": "right" },
+        { "name": "הרשימה המשותפת", "seats": 13, "color": "#34d399", "bloc": "arab" },
+        { "name": "ש\"ס", "seats": 9, "color": "#6366f1", "bloc": "right" },
+        { "name": "ישראל ביתנו", "seats": 8, "color": "#e879f9", "bloc": "other" },
+        { "name": "יהדות התורה", "seats": 7, "color": "#94a3b8", "bloc": "right" },
+        { "name": "ימינה", "seats": 7, "color": "#a855f7", "bloc": "right" },
+        { "name": "העבודה-גשר", "seats": 6, "color": "#ef4444", "bloc": "center" },
+        { "name": "המחנה הדמוקרטי", "seats": 5, "color": "#22c55e", "bloc": "center" }
+      ]
+    },
+    {
+      "id": "k23",
+      "knesset": 23,
+      "date": "2020-03-02",
+      "turnout": 0.7152,
+      "pm": "בנימין נתניהו (ממשלת רוטציה עם גנץ)",
+      "results": [
+        { "name": "הליכוד", "seats": 36, "color": "#3b82f6", "bloc": "right" },
+        { "name": "כחול לבן", "seats": 33, "color": "#38bdf8", "bloc": "center" },
+        { "name": "הרשימה המשותפת", "seats": 15, "color": "#34d399", "bloc": "arab" },
+        { "name": "ש\"ס", "seats": 9, "color": "#6366f1", "bloc": "right" },
+        { "name": "יהדות התורה", "seats": 7, "color": "#94a3b8", "bloc": "right" },
+        { "name": "העבודה-גשר-מרצ", "seats": 7, "color": "#ef4444", "bloc": "center" },
+        { "name": "ישראל ביתנו", "seats": 7, "color": "#e879f9", "bloc": "other" },
+        { "name": "ימינה", "seats": 6, "color": "#a855f7", "bloc": "right" }
+      ]
+    },
+    {
+      "id": "k24",
+      "knesset": 24,
+      "date": "2021-03-23",
+      "turnout": 0.6744,
+      "pm": "נפתלי בנט ויאיר לפיד (ממשלת השינוי)",
+      "results": [
+        { "name": "הליכוד", "seats": 30, "color": "#3b82f6", "bloc": "right" },
+        { "name": "יש עתיד", "seats": 17, "color": "#0ea5e9", "bloc": "center" },
+        { "name": "ש\"ס", "seats": 9, "color": "#6366f1", "bloc": "right" },
+        { "name": "כחול לבן", "seats": 8, "color": "#38bdf8", "bloc": "center" },
+        { "name": "ימינה", "seats": 7, "color": "#a855f7", "bloc": "right" },
+        { "name": "העבודה", "seats": 7, "color": "#ef4444", "bloc": "center" },
+        { "name": "יהדות התורה", "seats": 7, "color": "#94a3b8", "bloc": "right" },
+        { "name": "ישראל ביתנו", "seats": 7, "color": "#e879f9", "bloc": "center" },
+        { "name": "הציונות הדתית", "seats": 6, "color": "#f97316", "bloc": "right" },
+        { "name": "הרשימה המשותפת", "seats": 6, "color": "#34d399", "bloc": "arab" },
+        { "name": "תקווה חדשה", "seats": 6, "color": "#1d4ed8", "bloc": "center" },
+        { "name": "מרצ", "seats": 6, "color": "#22c55e", "bloc": "center" },
+        { "name": "רע\"ם", "seats": 4, "color": "#16a34a", "bloc": "arab" }
+      ]
+    },
+    {
+      "id": "k25",
+      "knesset": 25,
+      "date": "2022-11-01",
+      "turnout": 0.7063,
+      "pm": "בנימין נתניהו (ממשלה 37)",
+      "results": [
+        { "name": "הליכוד", "seats": 32, "color": "#3b82f6", "bloc": "right" },
+        { "name": "יש עתיד", "seats": 24, "color": "#0ea5e9", "bloc": "center" },
+        { "name": "הציונות הדתית", "seats": 14, "color": "#f97316", "bloc": "right" },
+        { "name": "המחנה הממלכתי", "seats": 12, "color": "#38bdf8", "bloc": "center" },
+        { "name": "ש\"ס", "seats": 11, "color": "#6366f1", "bloc": "right" },
+        { "name": "יהדות התורה", "seats": 7, "color": "#94a3b8", "bloc": "right" },
+        { "name": "ישראל ביתנו", "seats": 6, "color": "#e879f9", "bloc": "center" },
+        { "name": "רע\"ם", "seats": 5, "color": "#16a34a", "bloc": "arab" },
+        { "name": "חד\"ש-תע\"ל", "seats": 5, "color": "#34d399", "bloc": "arab" },
+        { "name": "העבודה", "seats": 4, "color": "#ef4444", "bloc": "center" }
+      ]
+    }
+  ],
+  "parties2022": {
+    "likud": { "name": "הליכוד", "color": "#3b82f6" },
+    "yesh-atid": { "name": "יש עתיד", "color": "#0ea5e9" },
+    "rzp": { "name": "הציונות הדתית", "color": "#f97316" },
+    "national-unity": { "name": "המחנה הממלכתי", "color": "#38bdf8" },
+    "shas": { "name": "ש\"ס", "color": "#6366f1" },
+    "utj": { "name": "יהדות התורה", "color": "#94a3b8" },
+    "yisrael-beiteinu": { "name": "ישראל ביתנו", "color": "#e879f9" },
+    "raam": { "name": "רע\"ם", "color": "#16a34a" },
+    "hadash-taal": { "name": "חד\"ש-תע\"ל", "color": "#34d399" },
+    "labor": { "name": "העבודה", "color": "#ef4444" },
+    "meretz": { "name": "מרצ", "color": "#22c55e" },
+    "balad": { "name": "בל\"ד", "color": "#059669" },
+    "jewish-home": { "name": "הבית היהודי", "color": "#c2410c" },
+    "others": { "name": "אחרות", "color": "#475569" }
+  }
+}
