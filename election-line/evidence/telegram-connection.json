@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-10-27T20:05:53.965Z",
+  "scope": "Actual HTTPS responses from the deployed Worker; no telephone audio test",
+  "summary": {
+    "http": 200,
+    "state": "ready",
+    "seconds": 6.654,
+    "characters": 1647,
+    "rootReturn": true,
+    "sourceLabels": {
+      "yinon": true,
+      "amit": true,
+      "now14": true
+    },
+    "unavailable": false,
+    "cached": false
+  },
+  "health": {
+    "ok": true,
+    "news": {
+      "state": "ready",
+      "provider": "telegram_public",
+      "checkedAt": 1793131551850,
+      "items": 11,
+      "channels": {
+        "now14": {
+          "channel": "now14israel",
+          "state": "ready",
+          "items": 4,
+          "fallback": true,
+          "newestAt": "2026-10-27T19:59:23.000Z"
+        },
+        "yinon": {
+          "channel": "yinonews",
+          "state": "ready",
+          "items": 4,
+          "fallback": false,
+          "newestAt": "2026-10-27T20:02:35.000Z"
+        },
+        "amit": {
+          "channel": "amitsegal",
+          "state": "ready",
+          "items": 4,
+          "fallback": false,
+          "newestAt": "2026-10-27T20:04:24.000Z"
+        }
+      }
+    }
+  },
+  "deployment": {
+    "modifiedOn": "2026-10-27T20:05:35.773249Z",
+    "id": "b609e55f4f5a4fc29b8c0dabcfc860f5",
+    "etag": "5252f9564f4d49a36d09c9478dc949a698237d63f73489cc91a31e3056f499e3"
+  },
+  "newsText": "Omitted; metadata and source labels only"
+}

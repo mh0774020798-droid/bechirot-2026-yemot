@@ -2,1197 +2,1281 @@ TAP version 13
 # Subtest: Google editor self-tests pass
 ok 1 - Google editor self-tests pass
   ---
-  duration_ms: 6.869763
+  duration_ms: 31.23563
   type: 'test'
   ...
 # Subtest: menu contains all five topics and does not fetch data
 ok 2 - menu contains all five topics and does not fetch data
   ---
-  duration_ms: 1.356318
+  duration_ms: 12.381632
   type: 'test'
   ...
 # Subtest: menu key 1 selects physical child
 ok 3 - menu key 1 selects physical child
   ---
-  duration_ms: 0.931751
+  duration_ms: 6.548385
   type: 'test'
   ...
 # Subtest: menu key 2 selects physical child
 ok 4 - menu key 2 selects physical child
   ---
-  duration_ms: 0.912432
+  duration_ms: 11.534844
   type: 'test'
   ...
 # Subtest: menu key 3 selects physical child
 ok 5 - menu key 3 selects physical child
   ---
-  duration_ms: 1.172902
+  duration_ms: 9.664851
   type: 'test'
   ...
 # Subtest: menu key 4 selects physical child
 ok 6 - menu key 4 selects physical child
   ---
-  duration_ms: 0.857799
+  duration_ms: 9.258123
   type: 'test'
   ...
 # Subtest: menu key 5 selects physical child
 ok 7 - menu key 5 selects physical child
   ---
-  duration_ms: 0.868004
+  duration_ms: 2.42752
   type: 'test'
   ...
 # Subtest: menu key 0 returns to parent
 ok 8 - menu key 0 returns to parent
   ---
-  duration_ms: 1.586714
+  duration_ms: 3.692519
   type: 'test'
   ...
 # Subtest: menu key 9 returns to parent
 ok 9 - menu key 9 returns to parent
   ---
-  duration_ms: 1.320665
+  duration_ms: 6.209577
   type: 'test'
   ...
 # Subtest: invalid choice "6" requests input
 ok 10 - invalid choice "6" requests input
   ---
-  duration_ms: 0.762786
+  duration_ms: 2.417554
   type: 'test'
   ...
 # Subtest: invalid choice "8" requests input
 ok 11 - invalid choice "8" requests input
   ---
-  duration_ms: 0.651759
+  duration_ms: 1.363026
   type: 'test'
   ...
 # Subtest: invalid choice "1&hangup" requests input
 ok 12 - invalid choice "1&hangup" requests input
   ---
-  duration_ms: 5.117269
+  duration_ms: 1.663807
   type: 'test'
   ...
 # Subtest: invalid choice "" requests input
 ok 13 - invalid choice "" requests input
   ---
-  duration_ms: 0.967444
+  duration_ms: 4.852266
   type: 'test'
   ...
 # Subtest: invalid choice "11" requests input
 ok 14 - invalid choice "11" requests input
   ---
-  duration_ms: 0.870148
+  duration_ms: 0.936471
   type: 'test'
   ...
 # Subtest: GET and POST fetch only the fixed summary endpoint
 ok 15 - GET and POST fetch only the fixed summary endpoint
   ---
-  duration_ms: 2.796322
+  duration_ms: 4.028286
   type: 'test'
   ...
 # Subtest: GET and POST fetch only the fixed turnout endpoint
 ok 16 - GET and POST fetch only the fixed turnout endpoint
   ---
-  duration_ms: 2.280171
+  duration_ms: 2.208304
   type: 'test'
   ...
 # Subtest: GET and POST fetch only the fixed exitpolls endpoint
 ok 17 - GET and POST fetch only the fixed exitpolls endpoint
   ---
-  duration_ms: 1.930631
+  duration_ms: 2.506587
   type: 'test'
   ...
 # Subtest: GET and POST fetch only the fixed results endpoint
 ok 18 - GET and POST fetch only the fixed results endpoint
   ---
-  duration_ms: 1.355697
+  duration_ms: 3.507899
   type: 'test'
   ...
 # Subtest: GET and POST fetch only the fixed parties endpoint
 ok 19 - GET and POST fetch only the fixed parties endpoint
   ---
-  duration_ms: 1.489919
+  duration_ms: 7.553911
   type: 'test'
   ...
 # Subtest: unknown topic ../secret cannot trigger network or editor functions
 ok 20 - unknown topic ../secret cannot trigger network or editor functions
   ---
-  duration_ms: 0.920023
+  duration_ms: 4.586781
   type: 'test'
   ...
 # Subtest: unknown topic tick cannot trigger network or editor functions
 ok 21 - unknown topic tick cannot trigger network or editor functions
   ---
-  duration_ms: 0.526201
+  duration_ms: 1.272457
   type: 'test'
   ...
 # Subtest: unknown topic testLiveSources cannot trigger network or editor functions
 ok 22 - unknown topic testLiveSources cannot trigger network or editor functions
   ---
-  duration_ms: 0.806742
+  duration_ms: 7.269383
   type: 'test'
   ...
 # Subtest: unknown topic constructor cannot trigger network or editor functions
 ok 23 - unknown topic constructor cannot trigger network or editor functions
   ---
-  duration_ms: 1.551682
+  duration_ms: 1.848373
   type: 'test'
   ...
 # Subtest: unknown topic __proto__ cannot trigger network or editor functions
 ok 24 - unknown topic __proto__ cannot trigger network or editor functions
   ---
-  duration_ms: 0.760873
+  duration_ms: 1.245579
   type: 'test'
   ...
 # Subtest: invalid root "/9&x=1" uses safe fallback
 ok 25 - invalid root "/9&x=1" uses safe fallback
   ---
-  duration_ms: 1.7774
+  duration_ms: 3.746164
   type: 'test'
   ...
 # Subtest: invalid root "https://attacker.example" uses safe fallback
 ok 26 - invalid root "https://attacker.example" uses safe fallback
   ---
-  duration_ms: 0.798189
+  duration_ms: 0.687543
   type: 'test'
   ...
 # Subtest: invalid root "../" uses safe fallback
 ok 27 - invalid root "../" uses safe fallback
   ---
-  duration_ms: 0.805551
+  duration_ms: 7.07617
   type: 'test'
   ...
 # Subtest: invalid root "/" uses safe fallback
 ok 28 - invalid root "/" uses safe fallback
   ---
-  duration_ms: 1.790841
+  duration_ms: 2.410897
   type: 'test'
   ...
 # Subtest: invalid root "/9\\n&hangup" uses safe fallback
 ok 29 - invalid root "/9\\n&hangup" uses safe fallback
   ---
-  duration_ms: 0.786371
+  duration_ms: 3.768934
   type: 'test'
   ...
 # Subtest: invalid root "/a" uses safe fallback
 ok 30 - invalid root "/a" uses safe fallback
   ---
-  duration_ms: 0.834514
+  duration_ms: 3.548583
   type: 'test'
   ...
 # Subtest: invalid root "/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1" uses safe fallback
 ok 31 - invalid root "/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1/1" uses safe fallback
   ---
-  duration_ms: 0.807634
+  duration_ms: 1.225919
   type: 'test'
   ...
 # Subtest: sanitizer preserves decimals, turns punctuation into speech, strips protocol delimiters and controls
 ok 32 - sanitizer preserves decimals, turns punctuation into speech, strips protocol delimiters and controls
   ---
-  duration_ms: 0.922657
+  duration_ms: 0.931358
   type: 'test'
   ...
 # Subtest: URLs are omitted from narration
 ok 33 - URLs are omitted from narration
   ---
-  duration_ms: 0.792792
+  duration_ms: 1.25604
   type: 'test'
   ...
 # Subtest: long speech is split without losing any words
 ok 34 - long speech is split without losing any words
   ---
-  duration_ms: 12.488471
+  duration_ms: 24.734885
   type: 'test'
   ...
 # Subtest: empty speech and unreasonably long tokens are rejected
 ok 35 - empty speech and unreasonably long tokens are rejected
   ---
-  duration_ms: 1.629719
+  duration_ms: 3.910118
   type: 'test'
   ...
 # Subtest: invalid upstream: HTTP error produces spoken fallback and is not cached
 ok 36 - invalid upstream: HTTP error produces spoken fallback and is not cached
   ---
-  duration_ms: 1.161545
+  duration_ms: 3.228441
   type: 'test'
   ...
 # Subtest: invalid upstream: login HTML produces spoken fallback and is not cached
 ok 37 - invalid upstream: login HTML produces spoken fallback and is not cached
   ---
-  duration_ms: 1.192411
+  duration_ms: 1.674115
   type: 'test'
   ...
 # Subtest: invalid upstream: HTML pretending to be text produces spoken fallback and is not cached
 ok 38 - invalid upstream: HTML pretending to be text produces spoken fallback and is not cached
   ---
-  duration_ms: 1.085261
+  duration_ms: 4.623825
   type: 'test'
   ...
 # Subtest: invalid upstream: JSON produces spoken fallback and is not cached
 ok 39 - invalid upstream: JSON produces spoken fallback and is not cached
   ---
-  duration_ms: 1.27735
+  duration_ms: 5.327081
   type: 'test'
   ...
 # Subtest: invalid upstream: JSON content-type produces spoken fallback and is not cached
 ok 40 - invalid upstream: JSON content-type produces spoken fallback and is not cached
   ---
-  duration_ms: 1.037269
+  duration_ms: 1.322002
   type: 'test'
   ...
 # Subtest: invalid upstream: empty produces spoken fallback and is not cached
 ok 41 - invalid upstream: empty produces spoken fallback and is not cached
   ---
-  duration_ms: 0.934224
+  duration_ms: 1.14555
   type: 'test'
   ...
 # Subtest: invalid upstream: whitespace produces spoken fallback and is not cached
 ok 42 - invalid upstream: whitespace produces spoken fallback and is not cached
   ---
-  duration_ms: 0.949217
+  duration_ms: 1.318933
   type: 'test'
   ...
 # Subtest: invalid upstream: non Hebrew produces spoken fallback and is not cached
 ok 43 - invalid upstream: non Hebrew produces spoken fallback and is not cached
   ---
-  duration_ms: 0.967254
+  duration_ms: 1.484216
   type: 'test'
   ...
 # Subtest: invalid upstream: too large produces spoken fallback and is not cached
 ok 44 - invalid upstream: too large produces spoken fallback and is not cached
   ---
-  duration_ms: 1.028525
+  duration_ms: 2.018937
   type: 'test'
   ...
 # Subtest: invalid upstream: injected protocol produces spoken fallback and is not cached
 ok 45 - invalid upstream: injected protocol produces spoken fallback and is not cached
   ---
-  duration_ms: 0.911029
+  duration_ms: 2.665781
   type: 'test'
   ...
 # Subtest: invalid upstream: huge word produces spoken fallback and is not cached
 ok 46 - invalid upstream: huge word produces spoken fallback and is not cached
   ---
-  duration_ms: 1.213654
+  duration_ms: 2.748845
   type: 'test'
   ...
 # Subtest: HTTP header names are case insensitive and a UTF-8 BOM is accepted
 ok 47 - HTTP header names are case insensitive and a UTF-8 BOM is accepted
   ---
-  duration_ms: 0.907113
+  duration_ms: 2.199139
   type: 'test'
   ...
 # Subtest: fresh cache avoids another upstream fetch; refresh after 30 seconds
 ok 48 - fresh cache avoids another upstream fetch; refresh after 30 seconds
   ---
-  duration_ms: 1.068716
+  duration_ms: 1.412219
   type: 'test'
   ...
 # Subtest: cache is independent for different topics
 ok 49 - cache is independent for different topics
   ---
-  duration_ms: 1.169357
+  duration_ms: 2.010981
   type: 'test'
   ...
 # Subtest: failed refresh uses recent cache with an explicit age warning
 ok 50 - failed refresh uses recent cache with an explicit age warning
   ---
-  duration_ms: 1.234475
+  duration_ms: 2.22649
   type: 'test'
   ...
 # Subtest: cache older than five minutes is never read as current data
 ok 51 - cache older than five minutes is never read as current data
   ---
-  duration_ms: 0.973152
+  duration_ms: 1.701498
   type: 'test'
   ...
 # Subtest: cache which expires during a slow failed fetch is rejected
 ok 52 - cache which expires during a slow failed fetch is rejected
   ---
-  duration_ms: 0.997549
+  duration_ms: 1.178706
   type: 'test'
   ...
 # Subtest: failure backoff avoids repeated upstream calls for ten seconds
 ok 53 - failure backoff avoids repeated upstream calls for ten seconds
   ---
-  duration_ms: 1.633765
+  duration_ms: 2.390969
   type: 'test'
   ...
 # Subtest: busy per-topic lease returns fallback without launching a second fetch
 ok 54 - busy per-topic lease returns fallback without launching a second fetch
   ---
-  duration_ms: 3.314621
+  duration_ms: 2.338746
   type: 'test'
   ...
 # Subtest: busy lock uses a stale record with warning
 ok 55 - busy lock uses a stale record with warning
   ---
-  duration_ms: 0.787874
+  duration_ms: 8.4604
   type: 'test'
   ...
 # Subtest: network is outside global lock and lease is released after success
 ok 56 - network is outside global lock and lease is released after success
   ---
-  duration_ms: 0.621384
+  duration_ms: 5.077334
   type: 'test'
   ...
 # Subtest: lease is released after upstream error
 ok 57 - lease is released after upstream error
   ---
-  duration_ms: 0.767012
+  duration_ms: 3.4915
   type: 'test'
   ...
 # Subtest: missing cache service degrades to direct fetch
 ok 58 - missing cache service degrades to direct fetch
   ---
-  duration_ms: 0.708565
+  duration_ms: 3.982641
   type: 'test'
   ...
 # Subtest: cache write failure does not discard a valid live response
 ok 59 - cache write failure does not discard a valid live response
   ---
-  duration_ms: 0.58524
+  duration_ms: 0.877128
   type: 'test'
   ...
 # Subtest: unavailable lock service does not break live reading
 ok 60 - unavailable lock service does not break live reading
   ---
-  duration_ms: 0.75871
+  duration_ms: 1.417199
   type: 'test'
   ...
 # Subtest: corrupt cache not-json is ignored
 ok 61 - corrupt cache not-json is ignored
   ---
-  duration_ms: 0.687263
+  duration_ms: 4.901271
   type: 'test'
   ...
 # Subtest: corrupt cache {"text":"נתונים","fetchedAt":"bad"} is ignored
 ok 62 - corrupt cache {"text":"נתונים","fetchedAt":"bad"} is ignored
   ---
-  duration_ms: 0.52614
+  duration_ms: 11.555792
   type: 'test'
   ...
 # Subtest: corrupt cache {"text":"נתונים","fetchedAt":9999999999999} is ignored
 ok 63 - corrupt cache {"text":"נתונים","fetchedAt":9999999999999} is ignored
   ---
-  duration_ms: 0.586261
+  duration_ms: 6.523192
   type: 'test'
   ...
 # Subtest: source credit is retained once
 ok 64 - source credit is retained once
   ---
-  duration_ms: 0.774203
+  duration_ms: 4.981145
   type: 'test'
   ...
 # Subtest: public health reports connectivity and cache ages without fetching sources
 ok 65 - public health reports connectivity and cache ages without fetching sources
   ---
-  duration_ms: 1.093003
+  duration_ms: 4.041986
   type: 'test'
   ...
 # Subtest: live diagnostic checks all five topics and warms their caches
 ok 66 - live diagnostic checks all five topics and warms their caches
   ---
-  duration_ms: 1.11194
+  duration_ms: 3.143871
   type: 'test'
   ...
 # Subtest: live diagnostic reports partial failure without replacing valid cached data
 ok 67 - live diagnostic reports partial failure without replacing valid cached data
   ---
-  duration_ms: 0.943167
+  duration_ms: 4.73824
   type: 'test'
   ...
 # Subtest: simulated call: menu → key 2 → turnout → election menu
 ok 68 - simulated call: menu → key 2 → turnout → election menu
   ---
-  duration_ms: 17.687418
+  duration_ms: 443.650007
   type: 'test'
   ...
 # Subtest: simulated call: menu → key 3 → exitpolls → election menu
 ok 69 - simulated call: menu → key 3 → exitpolls → election menu
   ---
-  duration_ms: 4.61821
+  duration_ms: 10.363149
   type: 'test'
   ...
 # Subtest: simulated call: menu → key 4 → results → election menu
 ok 70 - simulated call: menu → key 4 → results → election menu
   ---
-  duration_ms: 3.945689
+  duration_ms: 8.186711
   type: 'test'
   ...
 # Subtest: simulated call: menu → key 5 → parties → election menu
 ok 71 - simulated call: menu → key 5 → parties → election menu
   ---
-  duration_ms: 11.308749
+  duration_ms: 14.615719
   type: 'test'
   ...
 # Subtest: nested election extension uses the configured root throughout the flow
 ok 72 - nested election extension uses the configured root throughout the flow
   ---
-  duration_ms: 14.017685
+  duration_ms: 6.017525
   type: 'test'
   ...
 # Subtest: source failure is safely voiced through the entire bridge
 ok 73 - source failure is safely voiced through the entire bridge
   ---
-  duration_ms: 2.848941
+  duration_ms: 5.718817
   type: 'test'
   ...
 # Subtest: stale source warning survives the bridge and is never described as current
 ok 74 - stale source warning survives the bridge and is never described as current
   ---
-  duration_ms: 1.848958
+  duration_ms: 6.933557
   type: 'test'
   ...
 # Subtest: normalization of punctuation survives the bridge without swallowing data
 ok 75 - normalization of punctuation survives the bridge without swallowing data
   ---
-  duration_ms: 1.616899
+  duration_ms: 3.277847
   type: 'test'
   ...
 # Subtest: a long post-election bulletin is split into supported chunks, without truncation
 ok 76 - a long post-election bulletin is split into supported chunks, without truncation
   ---
-  duration_ms: 21.581811
+  duration_ms: 134.011194
   type: 'test'
   ...
-# Subtest: all six supplied ext.ini files route to the correct Worker handlers
-ok 77 - all six supplied ext.ini files route to the correct Worker handlers
+# Subtest: native main menu and five API extensions use the supplied routing
+ok 77 - native main menu and five API extensions use the supplied routing
   ---
-  duration_ms: 1.085231
+  duration_ms: 2.067025
   type: 'test'
   ...
 # Subtest: news: the requested ten in the evening is spoken in Jerusalem time
 ok 78 - news: the requested ten in the evening is spoken in Jerusalem time
   ---
-  duration_ms: 21.657144
+  duration_ms: 188.414017
   type: 'test'
   ...
 # Subtest: news: summer time uses UTC plus three
 ok 79 - news: summer time uses UTC plus three
   ---
-  duration_ms: 0.584258
+  duration_ms: 0.831187
   type: 'test'
   ...
 # Subtest: news: clock 20:15
 ok 80 - news: clock 20:15
   ---
-  duration_ms: 2.432765
+  duration_ms: 3.940319
   type: 'test'
   ...
 # Subtest: news: clock 20:30
 ok 81 - news: clock 20:30
   ---
-  duration_ms: 1.521131
+  duration_ms: 9.766275
   type: 'test'
   ...
 # Subtest: news: clock 20:05
 ok 82 - news: clock 20:05
   ---
-  duration_ms: 0.790468
+  duration_ms: 0.873026
   type: 'test'
   ...
 # Subtest: news: previous day is announced
 ok 83 - news: previous day is announced
   ---
-  duration_ms: 0.603767
+  duration_ms: 1.175883
   type: 'test'
   ...
 # Subtest: news: requested source ערוץ 14
 ok 84 - news: requested source ערוץ 14
   ---
-  duration_ms: 1.755388
+  duration_ms: 4.051198
   type: 'test'
   ...
 # Subtest: news: requested source עכשיו 14
 ok 85 - news: requested source עכשיו 14
   ---
-  duration_ms: 0.344007
+  duration_ms: 1.692047
   type: 'test'
   ...
 # Subtest: news: requested source now14israel
 ok 86 - news: requested source now14israel
   ---
-  duration_ms: 0.286681
+  duration_ms: 2.061768
   type: 'test'
   ...
 # Subtest: news: requested source YINONEWS
 ok 87 - news: requested source YINONEWS
   ---
-  duration_ms: 0.467393
+  duration_ms: 0.587366
   type: 'test'
   ...
 # Subtest: news: requested source ינון מגל
 ok 88 - news: requested source ינון מגל
   ---
-  duration_ms: 0.164968
+  duration_ms: 0.390967
   type: 'test'
   ...
 # Subtest: news: requested source עמית סגל
 ok 89 - news: requested source עמית סגל
   ---
-  duration_ms: 0.168463
+  duration_ms: 1.333014
   type: 'test'
   ...
 # Subtest: news: requested source amitsegal
 ok 90 - news: requested source amitsegal
   ---
-  duration_ms: 0.380482
+  duration_ms: 0.514681
   type: 'test'
   ...
 # Subtest: news: unrelated sources are excluded
 ok 91 - news: unrelated sources are excluded
   ---
-  duration_ms: 0.176184
+  duration_ms: 0.404492
   type: 'test'
   ...
-# Subtest: news: official Telegram URL can identify the source
-ok 92 - news: official Telegram URL can identify the source
+# Subtest: news: selected Telegram URL can identify the source
+ok 92 - news: selected Telegram URL can identify the source
   ---
-  duration_ms: 0.157257
+  duration_ms: 0.602959
   type: 'test'
   ...
 # Subtest: news: conflicting source and Telegram URL are rejected
 ok 93 - news: conflicting source and Telegram URL are rejected
   ---
-  duration_ms: 0.109214
+  duration_ms: 0.290075
   type: 'test'
   ...
 # Subtest: news: invalid or stale publication time bad
 ok 94 - news: invalid or stale publication time bad
   ---
-  duration_ms: 0.121923
+  duration_ms: 0.241747
   type: 'test'
   ...
 # Subtest: news: invalid or stale publication time 2026-10-27T20:00:00
 ok 95 - news: invalid or stale publication time 2026-10-27T20:00:00
   ---
-  duration_ms: 0.054862
+  duration_ms: 0.174178
   type: 'test'
   ...
 # Subtest: news: invalid or stale publication time 2026-10-25T20:00:00Z
 ok 96 - news: invalid or stale publication time 2026-10-25T20:00:00Z
   ---
-  duration_ms: 0.171088
+  duration_ms: 0.194292
   type: 'test'
   ...
 # Subtest: news: invalid or stale publication time 2026-10-28T20:00:00Z
 ok 97 - news: invalid or stale publication time 2026-10-28T20:00:00Z
   ---
-  duration_ms: 0.230536
+  duration_ms: 0.176518
   type: 'test'
   ...
 # Subtest: news: most recent updates are first and duplicate text is not repeated
 ok 98 - news: most recent updates are first and duplicate text is not repeated
   ---
-  duration_ms: 0.223776
+  duration_ms: 4.741883
   type: 'test'
   ...
 # Subtest: news: four updates per source preserve all three channels
 ok 99 - news: four updates per source preserve all three channels
   ---
-  duration_ms: 1.224119
+  duration_ms: 2.368121
   type: 'test'
   ...
 # Subtest: news: HTML, delimiters and quotes are normalized without protocol injection
 ok 100 - news: HTML, delimiters and quotes are normalized without protocol injection
   ---
-  duration_ms: 0.370637
+  duration_ms: 0.461093
   type: 'test'
   ...
 # Subtest: news: announcement contains source, publication time and root return
 ok 101 - news: announcement contains source, publication time and root return
   ---
-  duration_ms: 0.842036
+  duration_ms: 2.363073
   type: 'test'
   ...
 # Subtest: news: no items and authentication failure are different announcements
 ok 102 - news: no items and authentication failure are different announcements
   ---
-  duration_ms: 0.23954
-  type: 'test'
-  ...
-# Subtest: news: source authentication 401 is reported without a bypass
-ok 103 - news: source authentication 401 is reported without a bypass
-  ---
-  duration_ms: 29.377114
-  type: 'test'
-  ...
-# Subtest: news: source authentication 403 is reported without a bypass
-ok 104 - news: source authentication 403 is reported without a bypass
-  ---
-  duration_ms: 2.766959
-  type: 'test'
-  ...
-# Subtest: news: source URL cannot be changed by the caller or send credentials off-site
-ok 105 - news: source URL cannot be changed by the caller or send credentials off-site
-  ---
-  duration_ms: 0.63848
-  type: 'test'
-  ...
-# Subtest: news: valid JSON is limited to the three requested sources
-ok 106 - news: valid JSON is limited to the three requested sources
-  ---
-  duration_ms: 3.990897
-  type: 'test'
-  ...
-# Subtest: news: malformed source is not spoken <html>login</html>
-ok 107 - news: malformed source is not spoken <html>login</html>
-  ---
-  duration_ms: 1.351932
-  type: 'test'
-  ...
-# Subtest: news: malformed source is not spoken {"wrong":[]}
-ok 108 - news: malformed source is not spoken {"wrong":[]}
-  ---
-  duration_ms: 1.161275
-  type: 'test'
-  ...
-# Subtest: news: malformed source is not spoken not json
-ok 109 - news: malformed source is not spoken not json
-  ---
-  duration_ms: 1.108576
-  type: 'test'
-  ...
-# Subtest: news: /summary reads site news rather than turnout
-ok 110 - news: /summary reads site news rather than turnout
-  ---
-  duration_ms: 6.676933
-  type: 'test'
-  ...
-# Subtest: news: /news reads site news rather than turnout
-ok 111 - news: /news reads site news rather than turnout
-  ---
-  duration_ms: 2.664514
-  type: 'test'
-  ...
-# Subtest: news: unauthorized site yields a clear spoken message and a diagnostic state
-ok 112 - news: unauthorized site yields a clear spoken message and a diagnostic state
-  ---
-  duration_ms: 1.741276
-  type: 'test'
-  ...
-# Subtest: news: fresh cache avoids source requests and reports selected sources
-ok 113 - news: fresh cache avoids source requests and reports selected sources
-  ---
-  duration_ms: 3.423715
-  type: 'test'
-  ...
-# Subtest: news: refresh failure serves a recent copy with a warning
-ok 114 - news: refresh failure serves a recent copy with a warning
-  ---
-  duration_ms: 3.113129
-  type: 'test'
-  ...
-# Subtest: news: expired cache is not used after a source failure
-ok 115 - news: expired cache is not used after a source failure
-  ---
-  duration_ms: 5.473495
-  type: 'test'
-  ...
-# Subtest: news: login failure has a short backoff and does not create fake news
-ok 116 - news: login failure has a short backoff and does not create fake news
-  ---
-  duration_ms: 1.746875
-  type: 'test'
-  ...
-# Subtest: news: authorization is never included in cache keys or spoken content
-ok 117 - news: authorization is never included in cache keys or spoken content
-  ---
-  duration_ms: 1.939995
-  type: 'test'
-  ...
-# Subtest: news: oversized individual words are skipped before caching
-ok 118 - news: oversized individual words are skipped before caching
-  ---
-  duration_ms: 0.820723
-  type: 'test'
-  ...
-# Subtest: news: a neighboring future calendar day is not called yesterday
-ok 119 - news: a neighboring future calendar day is not called yesterday
-  ---
-  duration_ms: 0.510988
-  type: 'test'
-  ...
-# Subtest: news: redirect 301 is not followed with authorization
-ok 120 - news: redirect 301 is not followed with authorization
-  ---
-  duration_ms: 3.727281
-  type: 'test'
-  ...
-# Subtest: news: redirect 302 is not followed with authorization
-ok 121 - news: redirect 302 is not followed with authorization
-  ---
-  duration_ms: 1.395117
+  duration_ms: 0.374262
   type: 'test'
   ...
 # Subtest: party speech removes quotes and escapes for Yemot at /
-ok 122 - party speech removes quotes and escapes for Yemot at /
+ok 103 - party speech removes quotes and escapes for Yemot at /
   ---
-  duration_ms: 12.366653
+  duration_ms: 32.590243
   type: 'test'
   ...
 # Subtest: party speech removes quotes and escapes for Yemot at /9
-ok 123 - party speech removes quotes and escapes for Yemot at /9
+ok 104 - party speech removes quotes and escapes for Yemot at /9
   ---
-  duration_ms: 2.171814
+  duration_ms: 7.643175
   type: 'test'
   ...
 # Subtest: real party fixture remains complete after phone compatibility normalization
-ok 124 - real party fixture remains complete after phone compatibility normalization
+ok 105 - real party fixture remains complete after phone compatibility normalization
   ---
-  duration_ms: 12.547715
+  duration_ms: 32.368988
   type: 'test'
   ...
 # Subtest: normalization never converts a quoted JSON document into IVR commands
-ok 125 - normalization never converts a quoted JSON document into IVR commands
+ok 106 - normalization never converts a quoted JSON document into IVR commands
   ---
-  duration_ms: 1.681396
+  duration_ms: 16.898155
   type: 'test'
   ...
 # Subtest: normalization rejects speech made empty by removing quotes
-ok 126 - normalization rejects speech made empty by removing quotes
+ok 107 - normalization rejects speech made empty by removing quotes
   ---
-  duration_ms: 1.35084
+  duration_ms: 13.283724
   type: 'test'
   ...
 # Subtest: main extension key 1 selects /1 using the existing Google deployment
-ok 127 - main extension key 1 selects /1 using the existing Google deployment
+ok 108 - main extension key 1 selects /1 using the existing Google deployment
   ---
-  duration_ms: 11.741354
+  duration_ms: 174.479204
   type: 'test'
   ...
 # Subtest: main extension key 2 selects /2 using the existing Google deployment
-ok 128 - main extension key 2 selects /2 using the existing Google deployment
+ok 109 - main extension key 2 selects /2 using the existing Google deployment
   ---
-  duration_ms: 2.973278
+  duration_ms: 29.545863
   type: 'test'
   ...
 # Subtest: main extension key 3 selects /3 using the existing Google deployment
-ok 129 - main extension key 3 selects /3 using the existing Google deployment
+ok 110 - main extension key 3 selects /3 using the existing Google deployment
   ---
-  duration_ms: 15.976698
+  duration_ms: 40.997153
   type: 'test'
   ...
 # Subtest: main extension key 4 selects /4 using the existing Google deployment
-ok 130 - main extension key 4 selects /4 using the existing Google deployment
+ok 111 - main extension key 4 selects /4 using the existing Google deployment
   ---
-  duration_ms: 1.948398
+  duration_ms: 11.413222
   type: 'test'
   ...
 # Subtest: main extension key 5 selects /5 using the existing Google deployment
-ok 131 - main extension key 5 selects /5 using the existing Google deployment
+ok 112 - main extension key 5 selects /5 using the existing Google deployment
   ---
-  duration_ms: 2.243411
+  duration_ms: 23.693838
   type: 'test'
   ...
 # Subtest: main extension summary returns to / after playback
-ok 132 - main extension summary returns to / after playback
+ok 113 - main extension summary returns to / after playback
   ---
-  duration_ms: 35.726712
+  duration_ms: 126.925747
   type: 'test'
   ...
 # Subtest: main extension turnout returns to / after playback
-ok 133 - main extension turnout returns to / after playback
+ok 114 - main extension turnout returns to / after playback
   ---
-  duration_ms: 7.191718
+  duration_ms: 14.811107
   type: 'test'
   ...
 # Subtest: main extension exitpolls returns to / after playback
-ok 134 - main extension exitpolls returns to / after playback
+ok 115 - main extension exitpolls returns to / after playback
   ---
-  duration_ms: 1.542468
+  duration_ms: 12.357184
   type: 'test'
   ...
 # Subtest: main extension results returns to / after playback
-ok 135 - main extension results returns to / after playback
+ok 116 - main extension results returns to / after playback
   ---
-  duration_ms: 1.324921
+  duration_ms: 8.619972
   type: 'test'
   ...
 # Subtest: main extension parties returns to / after playback
-ok 136 - main extension parties returns to / after playback
+ok 117 - main extension parties returns to / after playback
   ---
-  duration_ms: 1.870571
+  duration_ms: 5.251859
   type: 'test'
   ...
 # Subtest: main extension key 0 returns to main menu
-ok 137 - main extension key 0 returns to main menu
+ok 118 - main extension key 0 returns to main menu
   ---
-  duration_ms: 1.354265
+  duration_ms: 10.89331
   type: 'test'
   ...
 # Subtest: main extension key 9 returns to main menu
-ok 138 - main extension key 9 returns to main menu
+ok 119 - main extension key 9 returns to main menu
   ---
-  duration_ms: 1.012381
+  duration_ms: 5.006572
   type: 'test'
   ...
 # Subtest: main extension menu describes repeating the menu at zero
-ok 139 - main extension menu describes repeating the menu at zero
+ok 120 - main extension menu describes repeating the menu at zero
   ---
-  duration_ms: 2.611875
+  duration_ms: 7.565898
   type: 'test'
   ...
 # Subtest: default Worker root is the main extension
-ok 140 - default Worker root is the main extension
+ok 121 - default Worker root is the main extension
   ---
-  duration_ms: 1.765803
+  duration_ms: 2.631233
   type: 'test'
   ...
 # Subtest: main extension upstream failure returns safely to /
-ok 141 - main extension upstream failure returns safely to /
+ok 122 - main extension upstream failure returns safely to /
   ---
-  duration_ms: 2.576712
+  duration_ms: 6.985694
   type: 'test'
   ...
 # Subtest: main extension network failure returns safely to /
-ok 142 - main extension network failure returns safely to /
+ok 123 - main extension network failure returns safely to /
   ---
-  duration_ms: 5.984653
+  duration_ms: 5.292749
   type: 'test'
   ...
 # Subtest: main extension rejects unvalidated upstream redirects before mapping
-ok 143 - main extension rejects unvalidated upstream redirects before mapping
+ok 124 - main extension rejects unvalidated upstream redirects before mapping
   ---
-  duration_ms: 0.786792
+  duration_ms: 7.726226
   type: 'test'
   ...
 # Subtest: main extension retains complete split speech and does not rewrite spoken numbers
-ok 144 - main extension retains complete split speech and does not rewrite spoken numbers
+ok 125 - main extension retains complete split speech and does not rewrite spoken numbers
   ---
-  duration_ms: 8.918782
+  duration_ms: 14.719428
+  type: 'test'
+  ...
+# Subtest: Telegram parser keeps nested quotes in the message and excludes the footer
+ok 126 - Telegram parser keeps nested quotes in the message and excludes the footer
+  ---
+  duration_ms: 13.844704
+  type: 'test'
+  ...
+# Subtest: Telegram parser ignores other channels and script-created fake posts
+ok 127 - Telegram parser ignores other channels and script-created fake posts
+  ---
+  duration_ms: 9.061046
+  type: 'test'
+  ...
+# Subtest: Telegram parser handles single-quoted attributes and channel case
+ok 128 - Telegram parser handles single-quoted attributes and channel case
+  ---
+  duration_ms: 0.703015
+  type: 'test'
+  ...
+# Subtest: Telegram parser keeps each publication time with its own message
+ok 129 - Telegram parser keeps each publication time with its own message
+  ---
+  duration_ms: 0.637812
+  type: 'test'
+  ...
+# Subtest: Telegram media without a caption is not invented or transcribed
+ok 130 - Telegram media without a caption is not invented or transcribed
+  ---
+  duration_ms: 8.229558
+  type: 'test'
+  ...
+# Subtest: Telegram non-feed response is rejected: <html>login required</html>
+ok 131 - Telegram non-feed response is rejected: <html>login required</html>
+  ---
+  duration_ms: 2.819299
+  type: 'test'
+  ...
+# Subtest: Telegram non-feed response is rejected: <html>Site Unavailable</html>
+ok 132 - Telegram non-feed response is rejected: <html>Site Unavailable</html>
+  ---
+  duration_ms: 0.32039
+  type: 'test'
+  ...
+# Subtest: Telegram non-feed response is rejected: <div class="tgme_widget_message_wrap"></div>
+ok 133 - Telegram non-feed response is rejected: <div class="tgme_widget_message_wrap"></div>
+  ---
+  duration_ms: 0.125693
+  type: 'test'
+  ...
+# Subtest: Telegram invalid channel and oversized feed are rejected
+ok 134 - Telegram invalid channel and oversized feed are rejected
+  ---
+  duration_ms: 0.508307
+  type: 'test'
+  ...
+# Subtest: Telegram entity decoding cannot inject IVR parameters or controls
+ok 135 - Telegram entity decoding cannot inject IVR parameters or controls
+  ---
+  duration_ms: 0.343266
+  type: 'test'
+  ...
+# Subtest: Telegram long excerpts announce that the original message continues
+ok 136 - Telegram long excerpts announce that the original message continues
+  ---
+  duration_ms: 2.698004
+  type: 'test'
+  ...
+# Subtest: public Telegram feeds provide all three sources with no site credentials
+ok 137 - public Telegram feeds provide all three sources with no site credentials
+  ---
+  duration_ms: 53.777166
+  type: 'test'
+  ...
+# Subtest: c14news failure 401 uses only the user-selected public fallback
+ok 138 - c14news failure 401 uses only the user-selected public fallback
+  ---
+  duration_ms: 5.934566
+  type: 'test'
+  ...
+# Subtest: c14news failure 403 uses only the user-selected public fallback
+ok 139 - c14news failure 403 uses only the user-selected public fallback
+  ---
+  duration_ms: 6.127193
+  type: 'test'
+  ...
+# Subtest: c14news failure 404 uses only the user-selected public fallback
+ok 140 - c14news failure 404 uses only the user-selected public fallback
+  ---
+  duration_ms: 6.595554
+  type: 'test'
+  ...
+# Subtest: c14news failure 429 uses only the user-selected public fallback
+ok 141 - c14news failure 429 uses only the user-selected public fallback
+  ---
+  duration_ms: 2.191671
+  type: 'test'
+  ...
+# Subtest: c14news failure 503 uses only the user-selected public fallback
+ok 142 - c14news failure 503 uses only the user-selected public fallback
+  ---
+  duration_ms: 2.803746
+  type: 'test'
+  ...
+# Subtest: an inactive primary channel switches to a recent fallback
+ok 143 - an inactive primary channel switches to a recent fallback
+  ---
+  duration_ms: 4.121128
+  type: 'test'
+  ...
+# Subtest: one unavailable channel does not prevent other channels from being heard
+ok 144 - one unavailable channel does not prevent other channels from being heard
+  ---
+  duration_ms: 4.705712
+  type: 'test'
+  ...
+# Subtest: total feed failure is explicit and creates no invented news
+ok 145 - total feed failure is explicit and creates no invented news
+  ---
+  duration_ms: 1.121315
+  type: 'test'
+  ...
+# Subtest: fresh per-channel cache avoids all source requests
+ok 146 - fresh per-channel cache avoids all source requests
+  ---
+  duration_ms: 2.6754
+  type: 'test'
+  ...
+# Subtest: a recent cached channel is announced when its refresh fails
+ok 147 - a recent cached channel is announced when its refresh fails
+  ---
+  duration_ms: 8.273705
+  type: 'test'
+  ...
+# Subtest: a live fallback is preferred over an unavailable primary with a cached copy
+ok 148 - a live fallback is preferred over an unavailable primary with a cached copy
+  ---
+  duration_ms: 10.38627
+  type: 'test'
+  ...
+# Subtest: expired copies older than five minutes are not voiced after a failure
+ok 149 - expired copies older than five minutes are not voiced after a failure
+  ---
+  duration_ms: 4.185122
+  type: 'test'
+  ...
+# Subtest: temporary feed failures have a bounded retry backoff
+ok 150 - temporary feed failures have a bounded retry backoff
+  ---
+  duration_ms: 3.350741
+  type: 'test'
+  ...
+# Subtest: unexpected upstream 302 text/html is not read as news
+ok 151 - unexpected upstream 302 text/html is not read as news
+  ---
+  duration_ms: 5.881268
+  type: 'test'
+  ...
+# Subtest: unexpected upstream 200 application/json is not read as news
+ok 152 - unexpected upstream 200 application/json is not read as news
+  ---
+  duration_ms: 3.25379
+  type: 'test'
+  ...
+# Subtest: unexpected upstream 200 text/html is not read as news
+ok 153 - unexpected upstream 200 text/html is not read as news
+  ---
+  duration_ms: 0.574212
+  type: 'test'
+  ...
+# Subtest: overlarge responses and aborts are handled without news or leaked timers
+ok 154 - overlarge responses and aborts are handled without news or leaked timers
+  ---
+  duration_ms: 83.020176
+  type: 'test'
+  ...
+# Subtest: deployed-handler contract GET /summary voices Telegram, not turnout
+ok 155 - deployed-handler contract GET /summary voices Telegram, not turnout
+  ---
+  duration_ms: 24.915299
+  type: 'test'
+  ...
+# Subtest: deployed-handler contract POST /summary voices Telegram, not turnout
+ok 156 - deployed-handler contract POST /summary voices Telegram, not turnout
+  ---
+  duration_ms: 5.693839
+  type: 'test'
+  ...
+# Subtest: deployed-handler contract GET /news voices Telegram, not turnout
+ok 157 - deployed-handler contract GET /news voices Telegram, not turnout
+  ---
+  duration_ms: 5.04775
+  type: 'test'
+  ...
+# Subtest: deployed-handler contract POST /news voices Telegram, not turnout
+ok 158 - deployed-handler contract POST /news voices Telegram, not turnout
+  ---
+  duration_ms: 4.991366
   type: 'test'
   ...
 # Subtest: valid Google response is returned as UTF-8 text without a redirect
-ok 145 - valid Google response is returned as UTF-8 text without a redirect
+ok 159 - valid Google response is returned as UTF-8 text without a redirect
   ---
-  duration_ms: 12.928438
+  duration_ms: 40.72128
   type: 'test'
   ...
 # Subtest: route /turnout fixes the Google topic and return folder
-ok 146 - route /turnout fixes the Google topic and return folder
+ok 160 - route /turnout fixes the Google topic and return folder
   ---
-  duration_ms: 1.529629
+  duration_ms: 2.057097
   type: 'test'
   ...
 # Subtest: route /exitpolls fixes the Google topic and return folder
-ok 147 - route /exitpolls fixes the Google topic and return folder
+ok 161 - route /exitpolls fixes the Google topic and return folder
   ---
-  duration_ms: 0.875526
+  duration_ms: 21.604458
   type: 'test'
   ...
 # Subtest: route /results fixes the Google topic and return folder
-ok 148 - route /results fixes the Google topic and return folder
+ok 162 - route /results fixes the Google topic and return folder
   ---
-  duration_ms: 0.655935
+  duration_ms: 0.754246
   type: 'test'
   ...
 # Subtest: route /parties fixes the Google topic and return folder
-ok 149 - route /parties fixes the Google topic and return folder
+ok 163 - route /parties fixes the Google topic and return folder
   ---
-  duration_ms: 1.037169
+  duration_ms: 1.09208
   type: 'test'
   ...
 # Subtest: menu route / accepts Google read response
-ok 150 - menu route / accepts Google read response
+ok 164 - menu route / accepts Google read response
   ---
-  duration_ms: 2.581769
+  duration_ms: 9.270848
   type: 'test'
   ...
 # Subtest: menu route /menu accepts Google read response
-ok 151 - menu route /menu accepts Google read response
+ok 165 - menu route /menu accepts Google read response
   ---
-  duration_ms: 1.176718
+  duration_ms: 3.156553
   type: 'test'
   ...
 # Subtest: menu route /menu/ accepts Google read response
-ok 152 - menu route /menu/ accepts Google read response
+ok 166 - menu route /menu/ accepts Google read response
   ---
-  duration_ms: 1.230659
+  duration_ms: 31.509083
   type: 'test'
   ...
 # Subtest: multiple spoken chunks, BOM and trailing whitespace are accepted
-ok 153 - multiple spoken chunks, BOM and trailing whitespace are accepted
+ok 167 - multiple spoken chunks, BOM and trailing whitespace are accepted
   ---
-  duration_ms: 2.004883
+  duration_ms: 3.164219
   type: 'test'
   ...
 # Subtest: unsupported method DELETE does not call Google
-ok 154 - unsupported method DELETE does not call Google
+ok 168 - unsupported method DELETE does not call Google
   ---
-  duration_ms: 1.581246
+  duration_ms: 0.495901
   type: 'test'
   ...
 # Subtest: unsupported method PUT does not call Google
-ok 155 - unsupported method PUT does not call Google
+ok 169 - unsupported method PUT does not call Google
   ---
-  duration_ms: 0.29949
+  duration_ms: 0.184065
   type: 'test'
   ...
 # Subtest: unsupported method PATCH does not call Google
-ok 156 - unsupported method PATCH does not call Google
+ok 170 - unsupported method PATCH does not call Google
   ---
-  duration_ms: 0.201453
+  duration_ms: 0.289313
   type: 'test'
   ...
 # Subtest: unsupported method HEAD does not call Google
-ok 157 - unsupported method HEAD does not call Google
+ok 171 - unsupported method HEAD does not call Google
   ---
-  duration_ms: 0.158819
+  duration_ms: 0.296634
   type: 'test'
   ...
 # Subtest: unsupported method OPTIONS does not call Google
-ok 158 - unsupported method OPTIONS does not call Google
+ok 172 - unsupported method OPTIONS does not call Google
   ---
-  duration_ms: 0.166671
+  duration_ms: 0.202799
   type: 'test'
   ...
 # Subtest: unknown route /tick is not exposed
-ok 159 - unknown route /tick is not exposed
+ok 173 - unknown route /tick is not exposed
   ---
-  duration_ms: 0.217667
+  duration_ms: 0.257577
   type: 'test'
   ...
 # Subtest: unknown route /internal/status is not exposed
-ok 160 - unknown route /internal/status is not exposed
+ok 174 - unknown route /internal/status is not exposed
   ---
-  duration_ms: 0.128213
+  duration_ms: 0.165168
   type: 'test'
   ...
 # Subtest: unknown route /unknown is not exposed
-ok 161 - unknown route /unknown is not exposed
+ok 175 - unknown route /unknown is not exposed
   ---
-  duration_ms: 1.483089
+  duration_ms: 3.730752
   type: 'test'
   ...
 # Subtest: unknown route /constructor is not exposed
-ok 162 - unknown route /constructor is not exposed
+ok 176 - unknown route /constructor is not exposed
   ---
-  duration_ms: 0.143055
+  duration_ms: 0.411745
   type: 'test'
   ...
 # Subtest: unknown route /health/more is not exposed
-ok 163 - unknown route /health/more is not exposed
+ok 177 - unknown route /health/more is not exposed
   ---
-  duration_ms: 0.10608
+  duration_ms: 0.160425
   type: 'test'
   ...
 # Subtest: form POST overrides query choice while caller details and admin parameters are dropped
-ok 164 - form POST overrides query choice while caller details and admin parameters are dropped
+ok 178 - form POST overrides query choice while caller details and admin parameters are dropped
   ---
-  duration_ms: 1.660265
+  duration_ms: 2.279071
   type: 'test'
   ...
 # Subtest: JSON POST accepts numeric menu choice only
-ok 165 - JSON POST accepts numeric menu choice only
+ok 179 - JSON POST accepts numeric menu choice only
   ---
-  duration_ms: 0.67859
+  duration_ms: 0.750032
   type: 'test'
   ...
 # Subtest: malformed JSON null yields spoken fallback
-ok 166 - malformed JSON null yields spoken fallback
+ok 180 - malformed JSON null yields spoken fallback
   ---
-  duration_ms: 0.382314
+  duration_ms: 0.542289
   type: 'test'
   ...
 # Subtest: malformed JSON [] yields spoken fallback
-ok 167 - malformed JSON [] yields spoken fallback
+ok 181 - malformed JSON [] yields spoken fallback
   ---
-  duration_ms: 0.220932
+  duration_ms: 0.63831
   type: 'test'
   ...
 # Subtest: malformed JSON {bad yields spoken fallback
-ok 168 - malformed JSON {bad yields spoken fallback
+ok 182 - malformed JSON {bad yields spoken fallback
   ---
-  duration_ms: 0.208914
+  duration_ms: 0.602409
   type: 'test'
   ...
 # Subtest: unsupported POST body type is rejected without fetch
-ok 169 - unsupported POST body type is rejected without fetch
+ok 183 - unsupported POST body type is rejected without fetch
   ---
-  duration_ms: 0.296205
+  duration_ms: 0.339486
   type: 'test'
   ...
 # Subtest: oversized body is rejected by streamed byte count
-ok 170 - oversized body is rejected by streamed byte count
+ok 184 - oversized body is rejected by streamed byte count
   ---
-  duration_ms: 0.410056
+  duration_ms: 0.503849
   type: 'test'
   ...
 # Subtest: oversized Content-Length is rejected before reading
-ok 171 - oversized Content-Length is rejected before reading
+ok 185 - oversized Content-Length is rejected before reading
   ---
-  duration_ms: 0.374272
+  duration_ms: 0.602635
   type: 'test'
   ...
 # Subtest: invalid menu choice is never forwarded to Google
-ok 172 - invalid menu choice is never forwarded to Google
+ok 186 - invalid menu choice is never forwarded to Google
   ---
-  duration_ms: 1.154705
+  duration_ms: 1.56336
   type: 'test'
   ...
 # Subtest: bad Google configuration "https://evil.example/exec" fails closed
-ok 173 - bad Google configuration "https://evil.example/exec" fails closed
+ok 187 - bad Google configuration "https://evil.example/exec" fails closed
   ---
-  duration_ms: 0.260442
+  duration_ms: 0.38784
   type: 'test'
   ...
 # Subtest: bad Google configuration "https://script.google.com/macros/s/abc/dev" fails closed
-ok 174 - bad Google configuration "https://script.google.com/macros/s/abc/dev" fails closed
+ok 188 - bad Google configuration "https://script.google.com/macros/s/abc/dev" fails closed
   ---
-  duration_ms: 0.163926
+  duration_ms: 0.187072
   type: 'test'
   ...
 # Subtest: bad Google configuration "https://script.google.com.evil.example/macros/s/a/exec" fails closed
-ok 175 - bad Google configuration "https://script.google.com.evil.example/macros/s/a/exec" fails closed
+ok 189 - bad Google configuration "https://script.google.com.evil.example/macros/s/a/exec" fails closed
   ---
-  duration_ms: 0.216134
+  duration_ms: 0.258283
   type: 'test'
   ...
 # Subtest: bad Google configuration "https://script.google.com/macros/s/TEST_DEPLOYMENT/exec?x=1" fails closed
-ok 176 - bad Google configuration "https://script.google.com/macros/s/TEST_DEPLOYMENT/exec?x=1" fails closed
+ok 190 - bad Google configuration "https://script.google.com/macros/s/TEST_DEPLOYMENT/exec?x=1" fails closed
   ---
-  duration_ms: 0.163616
+  duration_ms: 0.172625
   type: 'test'
   ...
 # Subtest: bad Google configuration "" fails closed
-ok 177 - bad Google configuration "" fails closed
+ok 191 - bad Google configuration "" fails closed
   ---
-  duration_ms: 0.158197
+  duration_ms: 0.142544
   type: 'test'
   ...
 # Subtest: invalid configured root returns safely to the system root
-ok 178 - invalid configured root returns safely to the system root
+ok 192 - invalid configured root returns safely to the system root
   ---
-  duration_ms: 0.25954
+  duration_ms: 0.236753
   type: 'test'
   ...
 # Subtest: invalid Google reply: HTML login yields fallback
-ok 179 - invalid Google reply: HTML login yields fallback
+ok 193 - invalid Google reply: HTML login yields fallback
   ---
-  duration_ms: 0.326211
+  duration_ms: 0.511839
   type: 'test'
   ...
 # Subtest: invalid Google reply: empty text yields fallback
-ok 180 - invalid Google reply: empty text yields fallback
+ok 194 - invalid Google reply: empty text yields fallback
   ---
-  duration_ms: 0.189485
+  duration_ms: 0.270921
   type: 'test'
   ...
 # Subtest: invalid Google reply: plain JSON yields fallback
-ok 181 - invalid Google reply: plain JSON yields fallback
+ok 195 - invalid Google reply: plain JSON yields fallback
   ---
-  duration_ms: 0.184697
+  duration_ms: 0.251208
   type: 'test'
   ...
 # Subtest: invalid Google reply: unexpected redirect yields fallback
-ok 182 - invalid Google reply: unexpected redirect yields fallback
+ok 196 - invalid Google reply: unexpected redirect yields fallback
   ---
-  duration_ms: 0.211418
+  duration_ms: 0.20077
   type: 'test'
   ...
 # Subtest: invalid Google reply: foreign return folder yields fallback
-ok 183 - invalid Google reply: foreign return folder yields fallback
+ok 197 - invalid Google reply: foreign return folder yields fallback
   ---
-  duration_ms: 0.243406
+  duration_ms: 0.420005
   type: 'test'
   ...
 # Subtest: invalid Google reply: extra command yields fallback
-ok 184 - invalid Google reply: extra command yields fallback
+ok 198 - invalid Google reply: extra command yields fallback
   ---
-  duration_ms: 0.275654
+  duration_ms: 0.550102
   type: 'test'
   ...
 # Subtest: invalid Google reply: injected speech type yields fallback
-ok 185 - invalid Google reply: injected speech type yields fallback
+ok 199 - invalid Google reply: injected speech type yields fallback
   ---
-  duration_ms: 0.236756
+  duration_ms: 0.340748
   type: 'test'
   ...
 # Subtest: invalid Google reply: hyphen in spoken content yields fallback
-ok 186 - invalid Google reply: hyphen in spoken content yields fallback
+ok 200 - invalid Google reply: hyphen in spoken content yields fallback
   ---
-  duration_ms: 0.302294
+  duration_ms: 0.237841
   type: 'test'
   ...
 # Subtest: invalid Google reply: newline in spoken content yields fallback
-ok 187 - invalid Google reply: newline in spoken content yields fallback
+ok 201 - invalid Google reply: newline in spoken content yields fallback
   ---
-  duration_ms: 0.248463
+  duration_ms: 0.233188
   type: 'test'
   ...
 # Subtest: invalid Google reply: oversized speech chunk yields fallback
-ok 188 - invalid Google reply: oversized speech chunk yields fallback
+ok 202 - invalid Google reply: oversized speech chunk yields fallback
   ---
-  duration_ms: 0.217847
+  duration_ms: 0.215429
   type: 'test'
   ...
 # Subtest: invalid Google reply: empty speech chunk yields fallback
-ok 189 - invalid Google reply: empty speech chunk yields fallback
+ok 203 - invalid Google reply: empty speech chunk yields fallback
   ---
-  duration_ms: 0.235423
+  duration_ms: 0.17732
   type: 'test'
   ...
 # Subtest: oversized Google response is rejected while streaming
-ok 190 - oversized Google response is rejected while streaming
+ok 204 - oversized Google response is rejected while streaming
   ---
-  duration_ms: 0.954635
+  duration_ms: 1.551925
   type: 'test'
   ...
 # Subtest: HTTP error from Google yields fallback
-ok 191 - HTTP error from Google yields fallback
+ok 205 - HTTP error from Google yields fallback
   ---
-  duration_ms: 0.51183
+  duration_ms: 0.404383
   type: 'test'
   ...
 # Subtest: network error from Google yields fallback
-ok 192 - network error from Google yields fallback
+ok 206 - network error from Google yields fallback
   ---
-  duration_ms: 0.399921
+  duration_ms: 0.608927
   type: 'test'
   ...
 # Subtest: 15 second network deadline aborts fetch and returns a spoken fallback
-ok 193 - 15 second network deadline aborts fetch and returns a spoken fallback
+ok 207 - 15 second network deadline aborts fetch and returns a spoken fallback
   ---
-  duration_ms: 1.269818
+  duration_ms: 1.288213
   type: 'test'
   ...
 # Subtest: health reports Google connectivity and whitelists fields
-ok 194 - health reports Google connectivity and whitelists fields
+ok 208 - health reports Google connectivity and whitelists fields
   ---
-  duration_ms: 31.991198
+  duration_ms: 6.362907
   type: 'test'
   ...
 # Subtest: bad health reply <html>login</html> returns HTTP 503
-ok 195 - bad health reply <html>login</html> returns HTTP 503
+ok 209 - bad health reply <html>login</html> returns HTTP 503
   ---
-  duration_ms: 1.583079
+  duration_ms: 0.639121
   type: 'test'
   ...
 # Subtest: bad health reply {} returns HTTP 503
-ok 196 - bad health reply {} returns HTTP 503
+ok 210 - bad health reply {} returns HTTP 503
   ---
-  duration_ms: 0.320151
+  duration_ms: 0.420296
   type: 'test'
   ...
 # Subtest: bad health reply {"ok":false} returns HTTP 503
-ok 197 - bad health reply {"ok":false} returns HTTP 503
+ok 211 - bad health reply {"ok":false} returns HTTP 503
   ---
-  duration_ms: 0.354492
+  duration_ms: 0.400158
   type: 'test'
   ...
 # Subtest: bad health reply {"ok":true,"version":"wrong"} returns HTTP 503
-ok 198 - bad health reply {"ok":true,"version":"wrong"} returns HTTP 503
+ok 212 - bad health reply {"ok":true,"version":"wrong"} returns HTTP 503
   ---
-  duration_ms: 0.712166
+  duration_ms: 0.339292
   type: 'test'
   ...
-1..198
-# tests 198
+1..212
+# tests 212
 # suites 0
-# pass 198
+# pass 212
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 257.138403
+# duration_ms 1921.909653

@@ -76,7 +76,7 @@ export const goodMessage = 'id_list_message=t-עדכון בחירות תקין&g
 export function googleFromGas(gas, calls = []) {
   return async (url, init) => {
     calls.push({url, init});
-    if(String(url).includes('/data/news.json')) return new Response(JSON.stringify(syntheticNews()),{headers:{'Content-Type':'application/json'}});
+    if(String(url).startsWith('https://t.me/s/')) return new Response(syntheticTelegram(new URL(url).pathname.split('/').pop()),{headers:{'Content-Type':'text/html; charset=utf-8'}});
     const p = Object.fromEntries(new URLSearchParams(init.body));
     const out = gas.request(p, 'POST');
     return new Response(out.text, {headers: {'Content-Type': out.mime}});
@@ -85,4 +85,11 @@ export function googleFromGas(gas, calls = []) {
 
 export function syntheticNews() {
   return {items:['ערוץ 14','ינון מגל','עמית סגל'].map((source,index)=>({source,date:new Date(Date.now()-60000-index*60000).toISOString(),title:'עדכון בדיקה '+['אלף','בית','גימל'][index],summary:'מידע סינתטי לצורכי בדיקה בלבד',url:''}))};
+}
+
+export function syntheticTelegram(channel,{date=new Date(Date.now()-60000).toISOString(),text='עדכון בדיקה '+channel,post=100}={}) {
+  return '<html><body><div class="tgme_widget_message_wrap"><div class="tgme_widget_message text_not_supported_wrap" data-post="'+channel+'/'+post+'">'+
+    '<div class="tgme_widget_message_text js-message_text" dir="auto">'+text+'</div>'+
+    '<div class="tgme_widget_message_footer"><span class="tgme_widget_message_views">123</span><a class="tgme_widget_message_date" href="https://t.me/'+channel+'/'+post+'"><time datetime="'+date+'" class="time">22:00</time></a></div>'+
+    '</div></div></body></html>';
 }

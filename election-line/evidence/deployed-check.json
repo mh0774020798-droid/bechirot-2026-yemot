@@ -1,13 +1,12 @@
 {
-  "checkedAt": "2026-10-27T17:49:55.366Z",
+  "checkedAt": "2026-10-27T20:09:18.577Z",
   "workerUrl": "https://elections-2026-yemot.mh0774020798.workers.dev",
   "yemotRoot": "/",
-  "scope": "Real HTTPS checks; site-news access may be blocked by its login requirement; no telephone audio test",
+  "scope": "Real HTTPS checks of public Telegram narration and Google election data; no telephone audio test",
   "client": "yemot-core-api/1.0",
-  "ok": false,
-  "total": 25,
-  "passed": 23,
-  "blocked": 2,
+  "ok": true,
+  "total": 28,
+  "passed": 28,
   "checks": [
     {
       "name": "health",
@@ -16,9 +15,9 @@
       "http": 200,
       "ok": true,
       "phoneSafe": null,
-      "seconds": 6.244,
+      "seconds": 5.745,
       "contentType": "application/json; charset=utf-8",
-      "body": "{\"ok\":true,\"version\":\"1.0.0\",\"checkedAt\":\"2026-10-27T17:49:48.012Z\",\"topics\":{\"summary\":{\"cached\":false,\"ageSeconds\":null},\"turnout\":{\"cached\":true,\"ageSeconds\":9},\"exitpolls\":{\"cached\":true,\"ageSeconds\":261},\"results\":{\"cached\":true,\"ageSeconds\":262},\"parties\":{\"cached\":true,\"ageSeconds\":262}},\"news\":{\"state\":\"authentication_required\",\"checkedAt\":1793123387430}}"
+      "body": "{\"ok\":true,\"version\":\"1.0.0\",\"checkedAt\":\"2026-10-27T20:09:05.791Z\",\"topics\":{\"summary\":{\"cached\":false,\"ageSeconds\":null},\"turnout\":{\"cached\":true,\"ageSeconds\":161},\"exitpolls\":{\"cached\":true,\"ageSeconds\":156},\"results\":{\"cached\":true,\"ageSeconds\":151},\"parties\":{\"cached\":true,\"ageSeconds\":156}},\"news\":{\"state\":\"ready\",\"provider\":\"telegram_public\",\"checkedAt\":1793131588144,\"items\":11,\"channels\":{\"now14\":{\"channel\":\"now14israel\",\"state\":\"ready\",\"items\":4,\"fallback\":true,\"newestAt\":\"2026-10-27T19:59:23.000Z\"},\"yinon\":{\"channel\":\"yinonews\",\"state\":\"ready\",\"items\":4,\"fallback\":false,\"newestAt\":\"2026-10-27T20:02:35.000Z\"},\"amit\":{\"channel\":\"amitsegal\",\"state\":\"ready\",\"items\":4,\"fallback\":false,\"newestAt\":\"2026-10-27T20:04:24.000Z\"}}}}"
     },
     {
       "name": "menu",
@@ -27,7 +26,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 6.21,
+      "seconds": 5.248,
       "contentType": "text/plain; charset=utf-8",
       "body": "read=t-ברוכים הבאים לקו עדכוני בחירות 2026, לעדכוני החדשות הקישו אחת, לאחוזי הצבעה הקישו שתיים, למדגמים הקישו שלוש, לתוצאות אמת הקישו ארבע, לרשימות ולאותיות הפתק הקישו חמש, להשמעת התפריט מחדש הקישו אפס=election_choice,no,1,1,7,No,yes,no,,0123459"
     },
@@ -36,12 +35,14 @@
       "path": "/summary",
       "method": "GET",
       "http": 200,
-      "ok": false,
-      "blocked": "site_authentication_required",
+      "ok": true,
+      "newsState": "ready",
+      "bodySha256": "25f3c37b027cb40939daa42a8be778973dcd17280afc0bc8539de32a91b4478d",
+      "bodyCharacters": 1670,
+      "bodyOmitted": "Public news text omitted from the stored report",
       "phoneSafe": true,
-      "seconds": 5.662,
-      "contentType": "text/plain; charset=utf-8",
-      "body": "id_list_message=t-עדכוני החדשות אינם זמינים כרגע, אנא נסו שוב מאוחר יותר&go_to_folder=/"
+      "seconds": 1.198,
+      "contentType": "text/plain; charset=utf-8"
     },
     {
       "name": "turnout GET",
@@ -50,9 +51,9 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 5.957,
+      "seconds": 2.01,
       "contentType": "text/plain; charset=utf-8",
-      "body": "id_list_message=t-אחוז ההצבעה הארצי נכון לשעה 6 בערב עומד על 66 נקודה 7 אחוזים, בבחירות הקודמות, באותה שעה, הצביעו 57 נקודה 7 אחוזים, בשעה 4 אחר הצהריים: 55 נקודה 7 אחוזים, בשעה 2 בצהריים: 44 נקודה 9 אחוזים, בשעה 12 בצהריים: 31 נקודה 5 אחוזים, בשעה 10 בבוקר: 16 נקודה 7 אחוזים, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
+      "body": "id_list_message=t-אחוז ההצבעה הארצי נכון לשעה 8 בערב עומד על 74 נקודה 3 אחוזים, בבחירות הקודמות, באותה שעה, הצביעו 66 נקודה 3 אחוזים, בשעה 6 בערב: 66 נקודה 7 אחוזים, בשעה 4 אחר הצהריים: 55 נקודה 7 אחוזים, בשעה 2 בצהריים: 44 נקודה 9 אחוזים, בשעה 12 בצהריים: 31 נקודה 5 אחוזים, בשעה 10 בבוקר: 16 נקודה 7 אחוזים, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
     },
     {
       "name": "exitpolls GET",
@@ -61,9 +62,9 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 1.237,
+      "seconds": 1.36,
       "contentType": "text/plain; charset=utf-8",
-      "body": "id_list_message=t-המדגמים יפורסמו עם סגירת הקלפיות, בשעה 10 בלילה, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
+      "body": "id_list_message=t-מדגם חדשות 12: הליכוד 24, ישר! 22, ביחד 12, הרשימה המשותפת 11, ישראל ביתנו 9, הדמוקרטים 9, שס 8, רעם 7, יהדות התורה 6, הציונות הדתית וזהות 6, עוצמה יהודית 6, לפי גושים: גוש השינוי 52, גוש נתניהו 50, המפלגות הערביות 18, מדגם ערוץ 14: הליכוד 30, ישר! 19, ביחד 11, הרשימה המשותפת 10, הדמוקרטים 9, שס 9, יהדות התורה 7, הציונות הדתית וזהות 7, רעם 7, עוצמה יהודית 7, ישראל ביתנו 4, לפי גושים: גוש נתניהו 60, גוש השינוי 43, המפלגות הערביות 17, מדגם.t-i24NEWS: הליכוד 27, ישר! 20, ביחד 15, הדמוקרטים 9, הרשימה המשותפת 9, שס 8, יהדות התורה 7, רעם 7, עוצמה יהודית 7, הציונות הדתית וזהות 6, ישראל ביתנו 5, לפי גושים: גוש נתניהו 55, גוש השינוי 49, המפלגות הערביות 16, מדגם כאן 11: הליכוד 25, ישר! 21, ביחד 14, הדמוקרטים 10, הרשימה המשותפת 10, ישראל ביתנו 8, עוצמה יהודית 7, רעם 7, יהדות התורה 6, שס 6, הציונות הדתית וזהות 6, לפי גושים: גוש השינוי 53, גוש נתניהו 50, המפלגות הערביות 17, הנתונים באדיבות אתר.t-בחירות 2026, חדר המצב,&go_to_folder=/"
     },
     {
       "name": "results GET",
@@ -72,9 +73,9 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 1.258,
+      "seconds": 1.647,
       "contentType": "text/plain; charset=utf-8",
-      "body": "id_list_message=t-ספירת הקולות תחל לאחר סגירת הקלפיות, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
+      "body": "id_list_message=t-ספירת הקולות החלה, התוצאות הראשונות יעודכנו כאן, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
     },
     {
       "name": "parties GET",
@@ -83,7 +84,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 1.172,
+      "seconds": 1.212,
       "contentType": "text/plain; charset=utf-8",
       "body": "id_list_message=t-בבחירות לכנסת ה 26 מתמודדות 38 רשימות, אלה הרשימות הגדולות ואותיות הפתק שלהן, ישר!, בראשות גדי איזנקוט, פתק דלת ריש כף סופית, הליכוד, בראשות בנימין נתניהו, פתק מם חית למד, ביחד, בראשות נפתלי בנט, פתק ריש קוף, הדמוקרטים, בראשות יאיר גולן, פתק אלף מם תו, הרשימה המשותפת, בראשות יוסף גבארין, פתק וו דלת מם סופית, עוצמה יהודית, בראשות איתמר בן גביר, פתק בית, ישראל ביתנו, בראשות אביגדור ליברמן, פתק למד, יהדות התורה, בראשות יעקב אשר, פתק גימל, שס, בראשות אריה דרעי, פתק שין סמך, הציונות.t-הדתית וזהות, בראשות בצלאל סמוטריץ, פתק טית, רעם, בראשות מנסור עבאס, פתק עין מם סופית, המילואימניקים והכלכלית, בראשות יועז הנדל, פתק דלת יוד, עמך ישראל, בראשות עופר וינטר, פתק כף סופית, הציבור החרדי, בראשות מוטי ליטנר, פתק זין כף סופית, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
     },
@@ -92,12 +93,14 @@
       "path": "/summary?root=%2F77&next=hangup",
       "method": "POST",
       "http": 200,
-      "ok": false,
-      "blocked": "site_authentication_required",
+      "ok": true,
+      "newsState": "ready",
+      "bodySha256": "25f3c37b027cb40939daa42a8be778973dcd17280afc0bc8539de32a91b4478d",
+      "bodyCharacters": 1670,
+      "bodyOmitted": "Public news text omitted from the stored report",
       "phoneSafe": true,
-      "seconds": 0.137,
-      "contentType": "text/plain; charset=utf-8",
-      "body": "id_list_message=t-עדכוני החדשות אינם זמינים כרגע, אנא נסו שוב מאוחר יותר&go_to_folder=/"
+      "seconds": 0.1,
+      "contentType": "text/plain; charset=utf-8"
     },
     {
       "name": "turnout POST",
@@ -106,9 +109,9 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.607,
+      "seconds": 0.616,
       "contentType": "text/plain; charset=utf-8",
-      "body": "id_list_message=t-אחוז ההצבעה הארצי נכון לשעה 6 בערב עומד על 66 נקודה 7 אחוזים, בבחירות הקודמות, באותה שעה, הצביעו 57 נקודה 7 אחוזים, בשעה 4 אחר הצהריים: 55 נקודה 7 אחוזים, בשעה 2 בצהריים: 44 נקודה 9 אחוזים, בשעה 12 בצהריים: 31 נקודה 5 אחוזים, בשעה 10 בבוקר: 16 נקודה 7 אחוזים, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
+      "body": "id_list_message=t-אחוז ההצבעה הארצי נכון לשעה 8 בערב עומד על 74 נקודה 3 אחוזים, בבחירות הקודמות, באותה שעה, הצביעו 66 נקודה 3 אחוזים, בשעה 6 בערב: 66 נקודה 7 אחוזים, בשעה 4 אחר הצהריים: 55 נקודה 7 אחוזים, בשעה 2 בצהריים: 44 נקודה 9 אחוזים, בשעה 12 בצהריים: 31 נקודה 5 אחוזים, בשעה 10 בבוקר: 16 נקודה 7 אחוזים, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
     },
     {
       "name": "exitpolls POST",
@@ -117,9 +120,9 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.65,
+      "seconds": 0.662,
       "contentType": "text/plain; charset=utf-8",
-      "body": "id_list_message=t-המדגמים יפורסמו עם סגירת הקלפיות, בשעה 10 בלילה, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
+      "body": "id_list_message=t-מדגם חדשות 12: הליכוד 24, ישר! 22, ביחד 12, הרשימה המשותפת 11, ישראל ביתנו 9, הדמוקרטים 9, שס 8, רעם 7, יהדות התורה 6, הציונות הדתית וזהות 6, עוצמה יהודית 6, לפי גושים: גוש השינוי 52, גוש נתניהו 50, המפלגות הערביות 18, מדגם ערוץ 14: הליכוד 30, ישר! 19, ביחד 11, הרשימה המשותפת 10, הדמוקרטים 9, שס 9, יהדות התורה 7, הציונות הדתית וזהות 7, רעם 7, עוצמה יהודית 7, ישראל ביתנו 4, לפי גושים: גוש נתניהו 60, גוש השינוי 43, המפלגות הערביות 17, מדגם.t-i24NEWS: הליכוד 27, ישר! 20, ביחד 15, הדמוקרטים 9, הרשימה המשותפת 9, שס 8, יהדות התורה 7, רעם 7, עוצמה יהודית 7, הציונות הדתית וזהות 6, ישראל ביתנו 5, לפי גושים: גוש נתניהו 55, גוש השינוי 49, המפלגות הערביות 16, מדגם כאן 11: הליכוד 25, ישר! 21, ביחד 14, הדמוקרטים 10, הרשימה המשותפת 10, ישראל ביתנו 8, עוצמה יהודית 7, רעם 7, יהדות התורה 6, שס 6, הציונות הדתית וזהות 6, לפי גושים: גוש השינוי 53, גוש נתניהו 50, המפלגות הערביות 17, הנתונים באדיבות אתר.t-בחירות 2026, חדר המצב,&go_to_folder=/"
     },
     {
       "name": "results POST",
@@ -128,9 +131,9 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.831,
+      "seconds": 0.679,
       "contentType": "text/plain; charset=utf-8",
-      "body": "id_list_message=t-ספירת הקולות תחל לאחר סגירת הקלפיות, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
+      "body": "id_list_message=t-ספירת הקולות החלה, התוצאות הראשונות יעודכנו כאן, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
     },
     {
       "name": "parties POST",
@@ -139,7 +142,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.611,
+      "seconds": 1.146,
       "contentType": "text/plain; charset=utf-8",
       "body": "id_list_message=t-בבחירות לכנסת ה 26 מתמודדות 38 רשימות, אלה הרשימות הגדולות ואותיות הפתק שלהן, ישר!, בראשות גדי איזנקוט, פתק דלת ריש כף סופית, הליכוד, בראשות בנימין נתניהו, פתק מם חית למד, ביחד, בראשות נפתלי בנט, פתק ריש קוף, הדמוקרטים, בראשות יאיר גולן, פתק אלף מם תו, הרשימה המשותפת, בראשות יוסף גבארין, פתק וו דלת מם סופית, עוצמה יהודית, בראשות איתמר בן גביר, פתק בית, ישראל ביתנו, בראשות אביגדור ליברמן, פתק למד, יהדות התורה, בראשות יעקב אשר, פתק גימל, שס, בראשות אריה דרעי, פתק שין סמך, הציונות.t-הדתית וזהות, בראשות בצלאל סמוטריץ, פתק טית, רעם, בראשות מנסור עבאס, פתק עין מם סופית, המילואימניקים והכלכלית, בראשות יועז הנדל, פתק דלת יוד, עמך ישראל, בראשות עופר וינטר, פתק כף סופית, הציבור החרדי, בראשות מוטי ליטנר, פתק זין כף סופית, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/"
     },
@@ -150,7 +153,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.559,
+      "seconds": 0.553,
       "contentType": "text/plain; charset=utf-8",
       "body": "go_to_folder=/"
     },
@@ -161,7 +164,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.853,
+      "seconds": 5.849,
       "contentType": "text/plain; charset=utf-8",
       "body": "go_to_folder=/1"
     },
@@ -172,7 +175,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.718,
+      "seconds": 0.574,
       "contentType": "text/plain; charset=utf-8",
       "body": "go_to_folder=/2"
     },
@@ -183,7 +186,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.696,
+      "seconds": 0.653,
       "contentType": "text/plain; charset=utf-8",
       "body": "go_to_folder=/3"
     },
@@ -194,7 +197,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 5.27,
+      "seconds": 0.692,
       "contentType": "text/plain; charset=utf-8",
       "body": "go_to_folder=/4"
     },
@@ -205,7 +208,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.739,
+      "seconds": 0.576,
       "contentType": "text/plain; charset=utf-8",
       "body": "go_to_folder=/5"
     },
@@ -216,7 +219,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.867,
+      "seconds": 0.92,
       "contentType": "text/plain; charset=utf-8",
       "body": "go_to_folder=/"
     },
@@ -227,7 +230,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.716,
+      "seconds": 0.565,
       "contentType": "text/plain; charset=utf-8",
       "body": "read=t-ברוכים הבאים לקו עדכוני בחירות 2026, לעדכוני החדשות הקישו אחת, לאחוזי הצבעה הקישו שתיים, למדגמים הקישו שלוש, לתוצאות אמת הקישו ארבע, לרשימות ולאותיות הפתק הקישו חמש, להשמעת התפריט מחדש הקישו אפס=election_choice,no,1,1,7,No,yes,no,,0123459"
     },
@@ -238,7 +241,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.728,
+      "seconds": 0.598,
       "contentType": "text/plain; charset=utf-8",
       "body": "read=t-ברוכים הבאים לקו עדכוני בחירות 2026, לעדכוני החדשות הקישו אחת, לאחוזי הצבעה הקישו שתיים, למדגמים הקישו שלוש, לתוצאות אמת הקישו ארבע, לרשימות ולאותיות הפתק הקישו חמש, להשמעת התפריט מחדש הקישו אפס=election_choice,no,1,1,7,No,yes,no,,0123459"
     },
@@ -249,7 +252,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.55,
+      "seconds": 0.586,
       "contentType": "text/plain; charset=utf-8",
       "body": "read=t-ברוכים הבאים לקו עדכוני בחירות 2026, לעדכוני החדשות הקישו אחת, לאחוזי הצבעה הקישו שתיים, למדגמים הקישו שלוש, לתוצאות אמת הקישו ארבע, לרשימות ולאותיות הפתק הקישו חמש, להשמעת התפריט מחדש הקישו אפס=election_choice,no,1,1,7,No,yes,no,,0123459"
     },
@@ -260,7 +263,7 @@
       "http": 200,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.566,
+      "seconds": 0.637,
       "contentType": "text/plain; charset=utf-8",
       "body": "go_to_folder=/4"
     },
@@ -271,7 +274,7 @@
       "http": 404,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.058,
+      "seconds": 0.028,
       "contentType": "text/plain; charset=utf-8",
       "body": "Not found"
     },
@@ -282,9 +285,48 @@
       "http": 405,
       "ok": true,
       "phoneSafe": true,
-      "seconds": 0.029,
+      "seconds": 0.026,
       "contentType": "text/plain; charset=utf-8",
       "body": "Method not allowed"
+    },
+    {
+      "name": "news alias GET",
+      "path": "/news",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "newsState": "ready",
+      "bodySha256": "25f3c37b027cb40939daa42a8be778973dcd17280afc0bc8539de32a91b4478d",
+      "bodyCharacters": 1670,
+      "bodyOmitted": "Public news text omitted from the stored report",
+      "phoneSafe": true,
+      "seconds": 0.08,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "name": "news alias POST",
+      "path": "/news",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "newsState": "ready",
+      "bodySha256": "25f3c37b027cb40939daa42a8be778973dcd17280afc0bc8539de32a91b4478d",
+      "bodyCharacters": 1670,
+      "bodyOmitted": "Public news text omitted from the stored report",
+      "phoneSafe": true,
+      "seconds": 0.056,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "name": "news source health",
+      "path": "/health",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "phoneSafe": null,
+      "seconds": 0.863,
+      "contentType": "application/json; charset=utf-8",
+      "body": "{\"ok\":true,\"version\":\"1.0.0\",\"checkedAt\":\"2026-10-27T20:09:18.197Z\",\"topics\":{\"summary\":{\"cached\":false,\"ageSeconds\":null},\"turnout\":{\"cached\":true,\"ageSeconds\":10},\"exitpolls\":{\"cached\":true,\"ageSeconds\":9},\"results\":{\"cached\":true,\"ageSeconds\":8},\"parties\":{\"cached\":true,\"ageSeconds\":8}},\"news\":{\"state\":\"ready\",\"provider\":\"telegram_public\",\"checkedAt\":1793131757713,\"items\":11,\"channels\":{\"now14\":{\"channel\":\"now14israel\",\"state\":\"ready\",\"items\":4,\"fallback\":true,\"newestAt\":\"2026-10-27T19:59:23.000Z\"},\"yinon\":{\"channel\":\"yinonews\",\"state\":\"ready\",\"items\":4,\"fallback\":false,\"newestAt\":\"2026-10-27T20:02:35.000Z\"},\"amit\":{\"channel\":\"amitsegal\",\"state\":\"ready\",\"items\":4,\"fallback\":false,\"newestAt\":\"2026-10-27T20:04:24.000Z\"}}}}"
     }
   ]
 }
