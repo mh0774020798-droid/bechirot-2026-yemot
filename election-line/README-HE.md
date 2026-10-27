@@ -1,5 +1,16 @@
 # קו עדכוני בחירות 2026 — הוראות התקנה
 
+## הפריסה הפעילה
+
+Google Apps Script ו־Cloudflare כבר נפרסו וחוברו. כתובת התפריט הפעילה:
+
+[פתיחת תפריט הבחירות](https://elections-2026-yemot.mh0774020798.workers.dev/menu)
+
+להתקנה בקו, צור שלוחה פנויה **9** עם תתי־שלוחות **1–5**, והעתק אליהן את קובצי `ext.ini` שבתיקיית `yemot/9`. הקבצים במאגר כבר כוללים את כתובת ה־Worker הפעילה, ולכן אין צורך להחליף בהם כתובת. `wrangler.toml` כולל את הגדרות הפריסה הפעילה. שינוי מספר השלוחה מחייב להתאים גם את `YEMOT_ROOT` ב־Worker.
+
+השלבים בהמשך מסבירים גם כיצד ליצור פריסה חדשה בעצמך. לאחר התקנת השלוחות נדרשת בדיקת חיוג אמיתית לכל חמשת המקשים וחזרה לתפריט.
+
+
 החבילה מפעילה קו טלפוני במבנה שביקשת: ימות המשיח פונה ל־Cloudflare Worker, ה־Worker פונה ל־Google Apps Script, והסקריפט קורא את מקור הבחירות ומחזיר פקודות הקראה לימות. התפריט טלפוני בלבד; אין אתר ניהול, עיצובים או צורך במפתח של שירות הקראה חיצוני.
 
 ברירת המחדל היא **שלוחה חדשה `/9`**, לצד קו החדשות הקיים שלך. אין בקוד פקודות לכתיבה לקו, מחיקת קבצים או שינוי השלוחות הקיימות. קובצי `ext.ini` מיועדים להעתקה לשלוחה פנויה שתבחר.
@@ -44,14 +55,14 @@
 1. בחר שלוחה פנויה עבור תפריט הבחירות. בדוגמאות זו שלוחה **9**.
 2. צור תחתיה את תתי השלוחות **1, 2, 3, 4, 5**.
 3. בתיקיית `yemot/9` שבחבילה יש קובץ `ext.ini` לתפריט ועוד קובץ בכל תת־שלוחה. העתק כל קובץ לשלוחה המתאימה במערכת שלך.
-4. בכל ששת הקבצים החלף את `https://YOUR-WORKER.workers.dev` בכתובת ה־Worker שלך. **שמור את הסיומת השונה בכל שלוחה**: `/menu`, `/summary`, `/turnout`, `/exitpolls`, `/results`, `/parties`.
+4. בכל ששת הקבצים החלף את `https://elections-2026-yemot.mh0774020798.workers.dev` בכתובת ה־Worker שלך. **שמור את הסיומת השונה בכל שלוחה**: `/menu`, `/summary`, `/turnout`, `/exitpolls`, `/results`, `/parties`.
 5. אם השתמשת בשלוחה אחרת, העתק את תוכן תיקיית `9` אל השלוחה שבחרת, וודא שהנתיב בקבוע `DEFAULT_YEMOT_ROOT` או במשתנה `YEMOT_ROOT` מתאים לה.
 
 לדוגמה, ההגדרות של תפריט הבחירות כוללות:
 
 ```ini
 type=api
-api_link=https://YOUR-WORKER.workers.dev/menu
+api_link=https://elections-2026-yemot.mh0774020798.workers.dev/menu
 api_url_post=yes
 api_hangup_send=no
 ```
@@ -60,7 +71,7 @@ api_hangup_send=no
 
 ```ini
 type=api
-api_link=https://YOUR-WORKER.workers.dev/results
+api_link=https://elections-2026-yemot.mh0774020798.workers.dev/results
 api_url_post=yes
 api_hangup_send=no
 ```
@@ -103,11 +114,12 @@ api_hangup_send=no
 ```bash
 npm test
 npm run test:live
+npm run test:deployed
 ```
 
 `npm test` בודק את קוד Google ואת ה־Worker, כולל סימולציה של מסלולי השיחה, GET ו־POST, בחירת מקשים, נתיבים מקוננים, מטמון, תקלות תקשורת, תשובות HTML/JSON שגויות, פיצול טקסט ארוך והגבלת זמן. `npm run test:live` קורא את חמש הכתובות החיות ומזין את התשובות לאותו קוד בסימולציה מקומית.
 
-הבדיקות האוטומטיות משתמשות בהדמיה של שירותי Google וב־Node עבור ה־Worker. הן אינן בדיקה של פריסה בחשבונות שלך או של מנוע ההקראה בשיחת טלפון אמיתית. תוצאות הבדיקות שבוצעו מצורפות ב־`TEST-REPORT-HE.md` ובתיקיית `evidence`.
+`npm test` משתמש בהדמיה של שירותי Google וב־Node עבור ה־Worker. בנוסף בוצעו 25 בדיקות HTTPS של הפריסה הפעילה באמצעות `npm run test:deployed`. בדיקות אלה אינן כוללות אימות של מנוע ההקראה בשיחת טלפון אמיתית. תוצאות הבדיקות שבוצעו מצורפות ב־`TEST-REPORT-HE.md` ובתיקיית `evidence`.
 
 ## אם משהו לא עובד
 
@@ -135,3 +147,5 @@ npm run test:live
 - [Google Apps Script: Content Service והפניות](https://developers.google.com/apps-script/guides/content)
 - [Google Apps Script: Cache](https://developers.google.com/apps-script/reference/cache/cache)
 - [Cloudflare Workers: Request](https://developers.cloudflare.com/workers/runtime-apis/request/)
+
+בדיקות API ב־workers.dev צריכות לשלוח זיהוי לקוח מפורש. `npm run test:deployed` עושה זאת אוטומטית. ראו [תיעוד Cloudflare לשגיאת 1010](https://developers.cloudflare.com/support/troubleshooting/http-status-codes/cloudflare-1xxx-errors/error-1010/).

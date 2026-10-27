@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "test:live": "node scripts/live-smoke.mjs"
+    "test:live": "node scripts/live-smoke.mjs",
+    "test:deployed": "node scripts/check-deployment.mjs"
   },
   "engines": {"node": ">=20"}
 }

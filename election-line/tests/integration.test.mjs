@@ -57,9 +57,13 @@ test('a long post-election bulletin is split into supported chunks, without trun
 });
 test('all six supplied ext.ini files route to the correct Worker handlers', () => {
   const paths = ['menu', ...TOPICS];
+  let origin;
   for (let i = 0; i < paths.length; i++) {
     const relative = i ? `9/${i}/ext.ini` : '9/ext.ini';
     const ini = fs.readFileSync(new URL('../yemot/' + relative, import.meta.url), 'utf8');
-    assert.match(ini, /^type=api/m); assert.ok(ini.includes('api_link=https://YOUR-WORKER.workers.dev/' + paths[i])); assert.match(ini, /^api_url_post=yes/m); assert.match(ini, /^api_hangup_send=no/m);
+    const link = new URL(ini.split('\n').find(line => line.startsWith('api_link=')).slice('api_link='.length).trim());
+    if (!origin) origin = link.origin;
+    assert.equal(link.protocol, 'https:'); assert.equal(link.origin, origin); assert.equal(link.pathname, '/' + paths[i]); assert.equal(link.search, ''); assert.equal(link.hash, '');
+    assert.match(ini, /^type=api/m); assert.match(ini, /^api_url_post=yes/m); assert.match(ini, /^api_hangup_send=no/m);
   }
 });

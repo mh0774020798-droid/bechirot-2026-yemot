@@ -1,0 +1,261 @@
+{
+  "checkedAt": "2026-10-27T14:19:13.283Z",
+  "workerUrl": "https://elections-2026-yemot.mh0774020798.workers.dev",
+  "scope": "Real HTTPS checks of deployed Cloudflare Worker connected to the deployed Google Apps Script; no telephone audio test",
+  "client": "Election-Line-Deployment-Check/1.0",
+  "ok": true,
+  "total": 25,
+  "passed": 25,
+  "checks": [
+    {
+      "name": "health",
+      "path": "/health",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "seconds": 9.783,
+      "contentType": "application/json; charset=utf-8",
+      "body": "{\"ok\":true,\"version\":\"1.0.0\",\"checkedAt\":\"2026-10-27T14:18:55.638Z\",\"topics\":{\"summary\":{\"cached\":false,\"ageSeconds\":null},\"turnout\":{\"cached\":false,\"ageSeconds\":null},\"exitpolls\":{\"cached\":false,\"ageSeconds\":null},\"results\":{\"cached\":false,\"ageSeconds\":null},\"parties\":{\"cached\":false,\"ageSeconds\":null}}}"
+    },
+    {
+      "name": "menu",
+      "path": "/menu",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "seconds": 9.22,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "read=t-ברוכים הבאים לקו עדכוני בחירות 2026, לתקציר העדכני הקישו אחת, לאחוזי הצבעה הקישו שתיים, למדגמים הקישו שלוש, לתוצאות אמת הקישו ארבע, לרשימות ולאותיות הפתק הקישו חמש, לחזרה לתפריט הקודם הקישו אפס=election_choice,no,1,1,7,No,yes,no,,0123459"
+    },
+    {
+      "name": "summary GET",
+      "path": "/summary",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "seconds": 10.677,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-אחוז ההצבעה הארצי נכון לשעה 2 בצהריים עומד על 44 נקודה 9 אחוזים, בבחירות הקודמות, באותה שעה, הצביעו 38 נקודה 9 אחוזים, בשעה 12 בצהריים: 31 נקודה 5 אחוזים, בשעה 10 בבוקר: 16 נקודה 7 אחוזים, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "turnout GET",
+      "path": "/turnout",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "seconds": 9.95,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-אחוז ההצבעה הארצי נכון לשעה 2 בצהריים עומד על 44 נקודה 9 אחוזים, בבחירות הקודמות, באותה שעה, הצביעו 38 נקודה 9 אחוזים, בשעה 12 בצהריים: 31 נקודה 5 אחוזים, בשעה 10 בבוקר: 16 נקודה 7 אחוזים, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "exitpolls GET",
+      "path": "/exitpolls",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.591,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-המדגמים יפורסמו עם סגירת הקלפיות, בשעה 10 בלילה, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "results GET",
+      "path": "/results",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "seconds": 2.055,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-ספירת הקולות תחל לאחר סגירת הקלפיות, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "parties GET",
+      "path": "/parties",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.336,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-בבחירות לכנסת ה 26 מתמודדות 38 רשימות, אלה הרשימות הגדולות ואותיות הפתק שלהן, ישר!, בראשות גדי איזנקוט, פתק דלת ריש כף סופית, הליכוד, בראשות בנימין נתניהו, פתק מם חית למד, ביחד, בראשות נפתלי בנט, פתק ריש קוף, הדמוקרטים, בראשות יאיר גולן, פתק אלף מם תו, הרשימה המשותפת, בראשות יוסף ג'בארין, פתק וו דלת מם סופית, עוצמה יהודית, בראשות איתמר בן גביר, פתק בית, ישראל ביתנו, בראשות אביגדור ליברמן, פתק למד, יהדות התורה, בראשות יעקב אשר, פתק גימל, ש\"ס, בראשות אריה דרעי, פתק שין סמך, הציונות.t-הדתית וזהות, בראשות בצלאל סמוטריץ', פתק טית, רע\"ם, בראשות מנסור עבאס, פתק עין מם סופית, המילואימניקים והכלכלית, בראשות יועז הנדל, פתק דלת יוד, עמך ישראל, בראשות עופר וינטר, פתק כף סופית, הציבור החרדי, בראשות מוטי ליטנר, פתק זין כף סופית, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "summary POST",
+      "path": "/summary?root=%2F77&next=hangup",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.038,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-אחוז ההצבעה הארצי נכון לשעה 2 בצהריים עומד על 44 נקודה 9 אחוזים, בבחירות הקודמות, באותה שעה, הצביעו 38 נקודה 9 אחוזים, בשעה 12 בצהריים: 31 נקודה 5 אחוזים, בשעה 10 בבוקר: 16 נקודה 7 אחוזים, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "turnout POST",
+      "path": "/turnout?root=%2F77&next=hangup",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 0.821,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-אחוז ההצבעה הארצי נכון לשעה 2 בצהריים עומד על 44 נקודה 9 אחוזים, בבחירות הקודמות, באותה שעה, הצביעו 38 נקודה 9 אחוזים, בשעה 12 בצהריים: 31 נקודה 5 אחוזים, בשעה 10 בבוקר: 16 נקודה 7 אחוזים, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "exitpolls POST",
+      "path": "/exitpolls?root=%2F77&next=hangup",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 0.786,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-המדגמים יפורסמו עם סגירת הקלפיות, בשעה 10 בלילה, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "results POST",
+      "path": "/results?root=%2F77&next=hangup",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.107,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-ספירת הקולות תחל לאחר סגירת הקלפיות, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "parties POST",
+      "path": "/parties?root=%2F77&next=hangup",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.134,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "id_list_message=t-בבחירות לכנסת ה 26 מתמודדות 38 רשימות, אלה הרשימות הגדולות ואותיות הפתק שלהן, ישר!, בראשות גדי איזנקוט, פתק דלת ריש כף סופית, הליכוד, בראשות בנימין נתניהו, פתק מם חית למד, ביחד, בראשות נפתלי בנט, פתק ריש קוף, הדמוקרטים, בראשות יאיר גולן, פתק אלף מם תו, הרשימה המשותפת, בראשות יוסף ג'בארין, פתק וו דלת מם סופית, עוצמה יהודית, בראשות איתמר בן גביר, פתק בית, ישראל ביתנו, בראשות אביגדור ליברמן, פתק למד, יהדות התורה, בראשות יעקב אשר, פתק גימל, ש\"ס, בראשות אריה דרעי, פתק שין סמך, הציונות.t-הדתית וזהות, בראשות בצלאל סמוטריץ', פתק טית, רע\"ם, בראשות מנסור עבאס, פתק עין מם סופית, המילואימניקים והכלכלית, בראשות יועז הנדל, פתק דלת יוד, עמך ישראל, בראשות עופר וינטר, פתק כף סופית, הציבור החרדי, בראשות מוטי ליטנר, פתק זין כף סופית, הנתונים באדיבות אתר בחירות 2026, חדר המצב,&go_to_folder=/9"
+    },
+    {
+      "name": "key 0",
+      "path": "/menu",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.112,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "go_to_folder=/"
+    },
+    {
+      "name": "key 1",
+      "path": "/menu",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 0.803,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "go_to_folder=/9/1"
+    },
+    {
+      "name": "key 2",
+      "path": "/menu",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.189,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "go_to_folder=/9/2"
+    },
+    {
+      "name": "key 3",
+      "path": "/menu",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.167,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "go_to_folder=/9/3"
+    },
+    {
+      "name": "key 4",
+      "path": "/menu",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 13.776,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "go_to_folder=/9/4"
+    },
+    {
+      "name": "key 5",
+      "path": "/menu",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 9.37,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "go_to_folder=/9/5"
+    },
+    {
+      "name": "key 9",
+      "path": "/menu",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.095,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "go_to_folder=/"
+    },
+    {
+      "name": "root menu",
+      "path": "/",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "seconds": 1.096,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "read=t-ברוכים הבאים לקו עדכוני בחירות 2026, לתקציר העדכני הקישו אחת, לאחוזי הצבעה הקישו שתיים, למדגמים הקישו שלוש, לתוצאות אמת הקישו ארבע, לרשימות ולאותיות הפתק הקישו חמש, לחזרה לתפריט הקודם הקישו אפס=election_choice,no,1,1,7,No,yes,no,,0123459"
+    },
+    {
+      "name": "POST menu",
+      "path": "/menu",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 0.652,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "read=t-ברוכים הבאים לקו עדכוני בחירות 2026, לתקציר העדכני הקישו אחת, לאחוזי הצבעה הקישו שתיים, למדגמים הקישו שלוש, לתוצאות אמת הקישו ארבע, לרשימות ולאותיות הפתק הקישו חמש, לחזרה לתפריט הקודם הקישו אפס=election_choice,no,1,1,7,No,yes,no,,0123459"
+    },
+    {
+      "name": "invalid choice",
+      "path": "/menu?election_choice=8",
+      "method": "GET",
+      "http": 200,
+      "ok": true,
+      "seconds": 0.718,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "read=t-ברוכים הבאים לקו עדכוני בחירות 2026, לתקציר העדכני הקישו אחת, לאחוזי הצבעה הקישו שתיים, למדגמים הקישו שלוש, לתוצאות אמת הקישו ארבע, לרשימות ולאותיות הפתק הקישו חמש, לחזרה לתפריט הקודם הקישו אפס=election_choice,no,1,1,7,No,yes,no,,0123459"
+    },
+    {
+      "name": "JSON choice",
+      "path": "/menu",
+      "method": "POST",
+      "http": 200,
+      "ok": true,
+      "seconds": 0.743,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "go_to_folder=/9/4"
+    },
+    {
+      "name": "unknown route",
+      "path": "/internal/tick",
+      "method": "GET",
+      "http": 404,
+      "ok": true,
+      "seconds": 0.056,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "Not found"
+    },
+    {
+      "name": "unsupported method",
+      "path": "/menu",
+      "method": "PUT",
+      "http": 405,
+      "ok": true,
+      "seconds": 0.029,
+      "contentType": "text/plain; charset=utf-8",
+      "body": "Method not allowed"
+    }
+  ]
+}
